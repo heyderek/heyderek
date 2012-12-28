@@ -283,7 +283,15 @@ body {
 h1, h3, h5 {
   font-family: "OpenSansCondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-weight: normal; }
+  font-weight: normal;
+  font-size: 52px; }
+
+h2, h4, h6 {
+  font-weight: normal;
+  font-size: 32px; }
+
+a {
+  transition: all 0.3s ease; }
 
 .page {
   background: url("images/subtlenet2.png"); }
@@ -295,14 +303,35 @@ h1, h3, h5 {
   margin: 0 auto;
   position: relative; }
 
+.copy {
+  width: 58.75em;
+  margin: 40px auto;
+  position: relative;
+  text-align: center; }
+
+.button {
+  font-family: "OpenSansCondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 10px 20px;
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease; }
+
+.orange {
+  background: #ff3300; }
+  .orange:hover {
+    background: #ff6600; }
+
 header {
-  text-align: center;
   padding: 20px 0; }
+  header .copy .button {
+    font-size: 28px; }
 
 .branding h1, .branding h2 {
   position: absolute;
-  text-indent: -9999em;
-  text-align: left; }
+  text-indent: -9999em; }
 .branding .logo {
   width: 13.75em;
   display: block;
@@ -319,7 +348,7 @@ header {
     border-bottom: 1px solid #999999;
     width: 28.75em;
     position: absolute;
-    top: 35%; }
+    top: 20%; }
     .access ul li {
       display: inline-block; }
   .access a {
@@ -328,9 +357,27 @@ header {
     display: block;
     text-decoration: none;
     color: #666666; }
+    .access a:hover {
+      color: #cccccc; }
   .access .menu-left {
     left: 0;
     text-align: right; }
   .access .menu-right {
     right: 0;
     text-align: left; }
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+  margin: 0 0 20px 0; }
+
+.colophon {
+  background: #666666;
+  color: white;
+  text-align: center; }
+  .colophon h4 {
+    padding: 20px;
+    margin: 0 0 20px;
+    font-size: 26px;
+    display: inline-block;
+    background: url("images/border-white.png") bottom repeat-x; }
+  .colophon h6 {
+    font-size: 16px; }

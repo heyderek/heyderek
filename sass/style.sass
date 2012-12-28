@@ -8,6 +8,7 @@
 $white: #fff
 $blue: #3399CC
 $orange: #FF3300
+$lt_orange: #FF6600
 $stone: #C6C0AA
 $cees: #ccc
 $sixes: #666
@@ -24,27 +25,55 @@ h1,h3,h5
   @include OpenSansCondensedBold
   text-transform: uppercase
   font-weight: normal
+  font-size: 52px
+h2,h4,h6
+  font-weight: normal
+  font-size: 32px
+a
+  transition: all .3s ease
 
 .page
   background: url('images/subtlenet2.png')
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2)
   background: url('images/subtnet2_@2x.png')
-
 .wrapper
   width: $cols16
   margin: 0 auto
   position: relative
+.copy
+  width: $cols12
+  margin: 40px auto
+  position: relative
+  text-align: center
+
+//UI Elements
+
+.button
+  @include OpenSansCondensedBold
+  padding: 10px $gutter
+  display: inline-block
+  color: $white
+  text-transform: uppercase
+  border: none
+  border-radius: 8px
+  transition: all .3s ease
+.orange
+  background: $orange
+  &:hover
+    background: $lt_orange
 
 //Header
 
 header
-  text-align: center
   padding: $gutter 0
+  .copy
+    .button
+      font-size: 28px
+
 .branding
   h1,h2
     position: absolute
     text-indent: -9999em
-    text-align: left
   .logo
     width: $cols3
     display: block
@@ -61,7 +90,7 @@ header
       bottom: 1px solid $nines
     width: $cols6
     position: absolute
-    top: 35%
+    top: 20%
     li
       display: inline-block
   a
@@ -70,6 +99,8 @@ header
     display: block
     text-decoration: none
     color: $sixes
+    &:hover
+      color: $cees
   .menu-left
     left: 0
     text-align: right
@@ -81,8 +112,25 @@ header
 
 //Content
 
+.content
+  h1,h2,h3,h4,h5,h6
+    margin: 0 0 $gutter 0
+
 //Sidebar
 
 //Footer
+
+.colophon
+  background: $sixes
+  color: $white
+  text-align: center
+  h4
+    padding: $gutter
+    margin: 0 0 $gutter
+    font-size: 26px
+    display: inline-block
+    background: url('images/border-white.png') bottom repeat-x
+  h6
+    font-size: 16px
 
 //Break Points
