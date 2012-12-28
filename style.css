@@ -324,6 +324,53 @@ a {
   .orange:hover {
     background: #ff6600; }
 
+.blue {
+  background: #3399cc;
+  color: white; }
+
+.white {
+  background: white;
+  color: #333333; }
+  .white:after {
+    border-color: white; }
+
+.page-tag {
+  text-align: center; }
+  .page-tag h3 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 28px;
+    position: relative;
+    line-height: 1.35em; }
+    .page-tag h3:before {
+      content: "";
+      position: absolute;
+      background: #c6c0aa;
+      top: 0;
+      left: -2em;
+      border-width: 1em;
+      border-style: solid;
+      border-color: transparent white transparent transparent; }
+    .page-tag h3:after {
+      content: "";
+      position: absolute;
+      background: #c6c0aa;
+      top: 0;
+      right: -2em;
+      border-width: 1em;
+      border-style: solid;
+      border-color: transparent transparent transparent white; }
+
+.white-double-border {
+  background: url("images/border-white.png") center center repeat-x; }
+
+.grey-double-border {
+  background: url("images/border-grey.png") center center repeat-x; }
+
+.tothetop {
+  margin: 0 auto;
+  display: block; }
+
 header {
   padding: 20px 0; }
   header .copy .button {
@@ -368,6 +415,43 @@ header {
 
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
   margin: 0 0 20px 0; }
+.content p, .content address, .content ul, .content ol {
+  line-height: 1.35em; }
+.content p, .content address {
+  margin: 0 0 20px 0; }
+.content blockquote {
+  border-right: 5px solid #3399cc;
+  margin: 0 0 20px 10px; }
+.content ul, .content ol {
+  margin: 0 0 20px 10px;
+  padding: 0 0 0 10px; }
+.content ul {
+  list-style: disc inside; }
+.content ol {
+  list-style: decimal inside; }
+
+.about {
+  background: #c6c0aa;
+  padding: 40px 0; }
+  .about .tothetop {
+    background: #333333;
+    border-radius: 10em 10em 0 0;
+    border: none;
+    color: white;
+    display: block;
+    padding: 0;
+    border-top: 10px solid #333333;
+    border-right: 10px solid #333333;
+    border-bottom: 0;
+    border-left: 10px solid #333333; }
+    .about .tothetop span {
+      border-top: 10px solid white;
+      border-right: 10px solid white;
+      border-bottom: 0;
+      border-left: 10px solid white;
+      padding: 50px 20px 10px;
+      border-radius: 10em 10em 0 0;
+      display: block; }
 
 .colophon {
   background: #666666;

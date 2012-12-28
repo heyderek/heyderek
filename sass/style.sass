@@ -61,6 +61,50 @@ a
   background: $orange
   &:hover
     background: $lt_orange
+.blue
+  background: $blue
+  color: $white
+.white
+  background: $white
+  color: $threes
+  &:after
+    border:
+      color: $white
+.page-tag
+  text-align: center
+  h3
+    display: inline-block
+    padding: 10px $gutter
+    font-size: 28px
+    position: relative
+    line-height: 1.35em
+    &:before
+      content: ''
+      position: absolute
+      background: $stone
+      top: 0
+      left: -2em
+      border:
+        width: 1em
+        style: solid
+        color: transparent $white transparent transparent
+    &:after
+      content: ''
+      position: absolute
+      background: $stone
+      top: 0
+      right: -2em
+      border:
+        width: 1em
+        style: solid
+        color: transparent transparent transparent $white
+.white-double-border
+  background: url('images/border-white.png') center center repeat-x
+.grey-double-border
+  background: url('images/border-grey.png') center center repeat-x
+.tothetop
+  margin: 0 auto
+  display: block
 
 //Header
 
@@ -115,6 +159,44 @@ header
 .content
   h1,h2,h3,h4,h5,h6
     margin: 0 0 $gutter 0
+  p, address, ul, ol
+    line-height: 1.35em
+  p, address
+    margin: 0 0 20px 0
+  blockquote
+    border-right: 5px solid $blue
+    margin: 0 0 20px 10px
+  ul, ol
+    margin: 0 0 20px 10px
+    padding: 0 0 0 10px
+  ul
+    list-style: disc inside
+  ol
+    list-style: decimal inside
+.about
+  background: $stone
+  padding: 40px 0
+  .tothetop
+    background: $threes
+    border-radius: 10em 10em 0 0
+    border: none
+    color: $white
+    display: block
+    padding: 0
+    border: 
+      top: 10px solid $threes
+      right: 10px solid $threes
+      bottom: 0
+      left: 10px solid $threes
+    span
+      border:
+        top: 10px solid $white
+        right: 10px solid $white
+        bottom: 0
+        left: 10px solid $white
+      padding: 50px 20px 10px
+      border-radius: 10em 10em 0 0
+      display: block
 
 //Sidebar
 
