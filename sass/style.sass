@@ -5,14 +5,77 @@
 
 //Colors
 
-//Typograpy
+$white: #fff
+$blue: #3399CC
+$orange: #FF3300
+$stone: #C6C0AA
+$cees: #ccc
+$sixes: #666
+$nines: #999
+$threes: #333
 
 //General
 
 body
   @include OpenSansLight
+  color: $threes
+  background: $sixes
+h1,h3,h5
+  @include OpenSansCondensedBold
+  text-transform: uppercase
+  font-weight: normal
+
+.page
+  background: url('images/subtlenet2.png')
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2)
+  background: url('images/subtnet2_@2x.png')
+
+.wrapper
+  width: $cols16
+  margin: 0 auto
+  position: relative
 
 //Header
+
+header
+  text-align: center
+  padding: $gutter 0
+.branding
+  h1,h2
+    position: absolute
+    text-indent: -9999em
+    text-align: left
+  .logo
+    width: $cols3
+    display: block
+    margin: 0 auto
+    img
+      width: 100%
+      height: auto
+.access
+  @include OpenSansCondensedBold
+  text-transform: uppercase
+  ul
+    border:
+      top: 1px solid $nines
+      bottom: 1px solid $nines
+    width: $cols6
+    position: absolute
+    top: 35%
+    li
+      display: inline-block
+  a
+    padding: $gutter
+    font-size: 20px
+    display: block
+    text-decoration: none
+    color: $sixes
+  .menu-left
+    left: 0
+    text-align: right
+  .menu-right
+    right: 0
+    text-align: left
 
 //Front Page
 
