@@ -324,6 +324,20 @@ a {
   position: relative;
   text-align: center; }
 
+input[type='text'], textarea {
+  font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: inline-block;
+  margin: 0 0 20px 0;
+  width: 15em;
+  background: #cccccc;
+  border: none;
+  color: #666666;
+  padding: 10px;
+  border-radius: 5px; }
+  input[type='text']:focus, textarea:focus {
+    background: white;
+    color: #666666; }
+
 .button {
   font-family: "OpenSansCondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 10px 20px;
@@ -356,7 +370,7 @@ a {
     .page-tag-white h3:before {
       content: "";
       position: absolute;
-      background: #c6c0aa;
+      background: #cccccc;
       top: 0;
       left: -2em;
       border-width: 1em;
@@ -365,7 +379,7 @@ a {
     .page-tag-white h3:after {
       content: "";
       position: absolute;
-      background: #c6c0aa;
+      background: #cccccc;
       top: 0;
       right: -2em;
       border-width: 1em;
@@ -418,7 +432,7 @@ footer.grey-double-border {
   display: block; }
 
 .ns-button-wrap-grey {
-  background: #c6c0aa;
+  background: #cccccc;
   position: relative;
   width: 13.75em;
   display: block;
@@ -475,7 +489,7 @@ footer.grey-double-border {
         display: block; }
 
 .ns-button-wrap-blue {
-  background: #3399cc;
+  background: url("images/subtlenet2.png");
   position: relative;
   width: 13.75em;
   display: block;
@@ -573,6 +587,15 @@ footer.grey-double-border {
     right: 0;
     text-align: left; }
 
+.about {
+  background: #cccccc;
+  position: relative; }
+
+.contact form {
+  width: 18.75em;
+  margin: 40px auto;
+  display: block; }
+
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
   margin: 0 0 20px 0; }
 .content p, .content address, .content ul, .content ol {
@@ -590,16 +613,12 @@ footer.grey-double-border {
 .content ol {
   list-style: decimal inside; }
 
-.about {
-  background: #c6c0aa;
-  position: relative; }
-
 .colophon {
   background: #666666;
   color: white;
   text-align: center; }
   .colophon h4 {
-    padding: 20px;
+    padding: 0 20px 20px;
     margin: 0 0 20px;
     font-size: 26px;
     display: inline-block;
@@ -607,4 +626,4 @@ footer.grey-double-border {
   .colophon h6 {
     font-size: 16px; }
   .colophon .wrapper {
-    margin-bottom: 20px; }
+    padding: 40px 0; }

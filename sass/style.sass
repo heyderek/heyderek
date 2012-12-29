@@ -11,7 +11,6 @@ $blue: #3399CC
 $drk_blue: #006699
 $orange: #FF3300
 $lt_orange: #FF6600
-$stone: #C6C0AA
 $cees: #ccc
 $sixes: #666
 $nines: #999
@@ -54,6 +53,22 @@ a
   position: relative
   text-align: center
 
+//Forms
+
+input[type='text'],textarea
+  @include OpenSansLight
+  display: inline-block
+  margin: 0 0 $gutter 0
+  width: 15em
+  background: $cees
+  border: none
+  color: $sixes
+  padding: 10px
+  border-radius: 5px
+  &:focus
+    background: $white
+    color: $sixes
+
 //UI Elements
 
 .button
@@ -85,7 +100,7 @@ a
     &:before
       content: ''
       position: absolute
-      background: $stone
+      background: $cees
       top: 0
       left: -2em
       border:
@@ -95,7 +110,7 @@ a
     &:after
       content: ''
       position: absolute
-      background: $stone
+      background: $cees
       top: 0
       right: -2em
       border:
@@ -146,7 +161,7 @@ footer.grey-double-border
   margin: 0 auto
   display: block
 .ns-button-wrap-grey
-  background: $stone
+  background: $cees
   position: relative
   width: $cols3
   display: block
@@ -203,7 +218,7 @@ footer.grey-double-border
         margin: 0 auto
         display: block
 .ns-button-wrap-blue
-  background: $blue
+  background: url('images/subtlenet2.png')
   position: relative
   width: $cols3
   display: block
@@ -309,6 +324,15 @@ footer.grey-double-border
 
 //Front Page
 
+.about
+  background: $cees
+  position: relative
+.contact
+  form
+    width: $cols4
+    margin: 40px auto
+    display: block
+
 //Content
 
 .content
@@ -328,9 +352,6 @@ footer.grey-double-border
     list-style: disc inside
   ol
     list-style: decimal inside
-.about
-  background: $stone
-  position: relative
 
 //Sidebar
 
@@ -341,7 +362,7 @@ footer.grey-double-border
   color: $white
   text-align: center
   h4
-    padding: $gutter
+    padding: 0 $gutter $gutter
     margin: 0 0 $gutter
     font-size: 26px
     display: inline-block
@@ -349,6 +370,6 @@ footer.grey-double-border
   h6
     font-size: 16px
   .wrapper
-    margin-bottom: 20px
+    padding: 40px 0
 
 //Break Points
