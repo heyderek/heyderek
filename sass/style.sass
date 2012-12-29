@@ -50,7 +50,7 @@ a
   position: relative
 .copy
   width: $cols12
-  margin: 40px auto
+  margin: 0 auto 40px
   position: relative
   text-align: center
 
@@ -72,19 +72,14 @@ a
 .blue
   background: $blue
   color: $white
-.white
-  background: $white
-  color: $threes
-  &:after
-    border:
-      color: $white
-.page-tag
+.page-tag-white
   text-align: center
-  padding: 40px 0
   h3
     display: inline-block
     padding: 10px $gutter
     font-size: 28px
+    background: $white
+    margin: 60px 0
     position: relative
     line-height: 1.35em
     &:before
@@ -100,13 +95,44 @@ a
     &:after
       content: ''
       position: absolute
-      background: $stone  
+      background: $stone
       top: 0
       right: -2em
       border:
         width: 1em
         style: solid
         color: transparent transparent transparent $white
+.page-tag-blue
+  text-align: center
+  h3
+    display: inline-block
+    padding: 10px $gutter
+    font-size: 28px
+    background: $blue
+    margin: 60px 0
+    position: relative
+    line-height: 1.35em
+    &:before
+      content: ''
+      position: absolute
+      background: url('images/subtlenet2.png')
+      top: 0
+      left: -2em
+      border:
+        width: 1em
+        style: solid
+        color: transparent $blue transparent transparent
+    &:after
+      content: ''
+      position: absolute
+      background: url('images/subtlenet2.png')
+      top: 0
+      right: -2em
+      border:
+        width: 1em
+        style: solid
+        color: transparent transparent transparent $blue
+
 .white-double-border
   background: url('images/border-white.png') center center repeat-x
 .grey-double-border
@@ -115,9 +141,125 @@ footer.white-double-border
   background: url('images/border-white.png') center 25% repeat-x
 footer.grey-double-border
   background: url('images/border-grey.png') center 25% repeat-x
+
 .tothetop
   margin: 0 auto
   display: block
+.ns-button-wrap-grey
+  background: $stone
+  position: relative
+  width: $cols3
+  display: block
+  padding: 0 20px
+  margin: 0 auto
+  overflow: hidden
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 10%
+    border-radius: 100px 100px 0 0
+    box-shadow: 0 3px 10px rgba(0,0,0,.75)
+    width: 80%
+    height: 90%
+    background: transparent
+    z-index: 3
+  .tothetop
+    background: $threes
+    display: block
+    position: relative
+    border: none
+    border-radius: 100px 100px 0 0
+    padding: 5px 5px 0
+    z-index: 9
+    transition: all .3s linear
+    &:hover
+      background: $blue
+    &:before
+      content: ''
+      position: absolute
+      z-index: 0
+      bottom: 0
+      padding: 0 20px
+      left: -20px
+      width: 100%
+      height: 100%
+    span
+      @include OpenSansCondensedBold
+      border:
+        top: 5px solid $white
+        right: 5px solid $white
+        bottom: 0
+        left: 5px solid $white
+      padding: 15px 25px 10px
+      border-radius: 100px 100px 0 0
+      display: block
+      font-size: 28px
+      color: $white
+      text-transform: uppercase
+      &:before
+        @include ModernPictogramsNormal
+        content: ']'
+        margin: 0 auto
+        display: block
+.ns-button-wrap-blue
+  background: $blue
+  position: relative
+  width: $cols3
+  display: block
+  padding: 0 20px
+  margin: 0 auto
+  overflow: hidden
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 10%
+    border-radius: 100px 100px 0 0
+    box-shadow: 0 3px 10px rgba(0,0,0,.75)
+    width: 80%
+    height: 90%
+    background: transparent
+    z-index: 3
+  .tothetop
+    background: $blue
+    display: block
+    position: relative
+    border: none
+    border-radius: 100px 100px 0 0
+    padding: 5px 5px 0
+    z-index: 9
+    transition: all .3s linear
+    &:hover
+      background: $threes
+    &:before
+      content: ''
+      position: absolute
+      z-index: 0
+      bottom: 0
+      padding: 0 20px
+      left: -20px
+      width: 100%
+      height: 100%
+    span
+      @include OpenSansCondensedBold
+      border:
+        top: 5px solid $white
+        right: 5px solid $white
+        bottom: 0
+        left: 5px solid $white
+      padding: 15px 25px 10px
+      border-radius: 100px 100px 0 0
+      display: block
+      font-size: 28px
+      color: $white
+      text-transform: uppercase
+      &:before
+        @include ModernPictogramsNormal
+        content: ']'
+        margin: 0 auto
+        display: block
+
 
 //Header
 
@@ -189,63 +331,6 @@ footer.grey-double-border
 .about
   background: $stone
   position: relative
-  .ns-button-wrap
-    background: $stone
-    position: relative
-    width: $cols3
-    display: block
-    padding: 0 20px
-    margin: 0 auto
-    overflow: hidden
-    &:after
-      content: ''
-      position: absolute
-      bottom: 0
-      left: 10%
-      border-radius: 100px 100px 0 0
-      box-shadow: 0 3px 10px rgba(0,0,0,.75)
-      width: 80%
-      height: 90%
-      background: transparent
-      z-index: 3
-  .tothetop
-    background: $threes
-    display: block
-    position: relative
-    border: none
-    border-radius: 100px 100px 0 0
-    padding: 5px 5px 0
-    z-index: 9
-    transition: all .3s linear
-    &:hover
-      background: $blue
-    &:before
-      content: ''
-      position: absolute
-      z-index: 0
-      bottom: 0
-      padding: 0 20px
-      left: -20px
-      width: 100%
-      height: 100%
-    span
-      @include OpenSansCondensedBold
-      border:
-        top: 5px solid $white
-        right: 5px solid $white
-        bottom: 0
-        left: 5px solid $white
-      padding: 15px 25px 10px
-      border-radius: 100px 100px 0 0
-      display: block
-      font-size: 28px
-      color: $white
-      text-transform: uppercase
-      &:before
-        @include ModernPictogramsNormal
-        content: ']'
-        margin: 0 auto
-        display: block
 
 //Sidebar
 
