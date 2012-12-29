@@ -2,6 +2,7 @@
 @import 'frameless.sass'
 @import 'fonts/open-sans-condensed-fontfacekit/stylesheet.sass'
 @import 'fonts/open-sans-fontfacekit/stylesheet.sass'
+@import 'fonts/modern-pictograms-fontfacekit/stylesheet.sass'
 
 //Colors
 
@@ -17,6 +18,8 @@ $threes: #333
 
 //General
 
+html, body
+  overlow-x: hidden
 body
   @include OpenSansLight
   color: $threes
@@ -31,6 +34,8 @@ h2,h4,h6
   font-size: 32px
 a
   transition: all .3s ease
+  color: $blue
+  text-decoration: none
 
 .page
   background: url('images/subtlenet2.png')
@@ -72,6 +77,7 @@ a
       color: $white
 .page-tag
   text-align: center
+  padding: 40px 0
   h3
     display: inline-block
     padding: 10px $gutter
@@ -91,7 +97,7 @@ a
     &:after
       content: ''
       position: absolute
-      background: $stone
+      background: $stone  
       top: 0
       right: -2em
       border:
@@ -102,13 +108,17 @@ a
   background: url('images/border-white.png') center center repeat-x
 .grey-double-border
   background: url('images/border-grey.png') center center repeat-x
+footer.white-double-border
+  background: url('images/border-white.png') center 25% repeat-x
+footer.grey-double-border
+  background: url('images/border-grey.png') center 25% repeat-x
 .tothetop
   margin: 0 auto
   display: block
 
 //Header
 
-header
+.masthead
   padding: $gutter 0
   .copy
     .button
@@ -175,28 +185,64 @@ header
     list-style: decimal inside
 .about
   background: $stone
-  padding: 40px 0
+  position: relative
+  .ns-button-wrap
+    background: $stone
+    position: relative
+    width: $cols3
+    display: block
+    padding: 0 20px
+    margin: 0 auto
+    overflow: hidden
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 10%
+      border-radius: 100px 100px 0 0
+      box-shadow: 0 3px 10px rgba(0,0,0,.75)
+      width: 80%
+      height: 90%
+      background: transparent
+      z-index: 3
   .tothetop
     background: $threes
-    border-radius: 10em 10em 0 0
-    border: none
-    color: $white
     display: block
-    padding: 0
-    border: 
-      top: 10px solid $threes
-      right: 10px solid $threes
+    position: relative
+    border: none
+    border-radius: 100px 100px 0 0
+    padding: 5px 5px 0
+    z-index: 9
+    transition: all .3s linear
+    &:hover
+      background: $blue
+    &:before
+      content: ''
+      position: absolute
+      z-index: 0
       bottom: 0
-      left: 10px solid $threes
+      padding: 0 20px
+      left: -20px
+      width: 100%
+      height: 100%
     span
+      @include OpenSansCondensedBold
       border:
-        top: 10px solid $white
-        right: 10px solid $white
+        top: 5px solid $white
+        right: 5px solid $white
         bottom: 0
-        left: 10px solid $white
-      padding: 50px 20px 10px
-      border-radius: 10em 10em 0 0
+        left: 5px solid $white
+      padding: 15px 25px 10px
+      border-radius: 100px 100px 0 0
       display: block
+      font-size: 28px
+      color: $white
+      text-transform: uppercase
+      &:before
+        @include ModernPictogramsNormal
+        content: ']'
+        margin: 0 auto
+        display: block
 
 //Sidebar
 
@@ -214,5 +260,7 @@ header
     background: url('images/border-white.png') bottom repeat-x
   h6
     font-size: 16px
+  .wrapper
+    margin-bottom: 20px
 
 //Break Points
