@@ -627,6 +627,7 @@ footer.grey-double-border {
   .gallery li {
     width: 18.75em;
     display: inline-block;
+    vertical-align: top;
     box-sizing: border-box;
     margin-left: 3.75em; }
     .gallery li:first-child {
@@ -634,6 +635,11 @@ footer.grey-double-border {
   .gallery img {
     width: 100%;
     height: auto; }
+    .gallery img:hover {
+      cursor: pointer; }
+
+.gallery-copy h5 {
+  font-size: 24px; }
 
 .colophon {
   background: #666666;
