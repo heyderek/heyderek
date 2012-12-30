@@ -314,7 +314,7 @@ a {
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
   background: url("images/subtnet2_@2x.png"); }
 .wrapper {
-  width: 78.75em;
+  width: 68.75em;
   margin: 0 auto;
   position: relative; }
 
@@ -545,8 +545,10 @@ footer.grey-double-border {
         margin: 0 auto;
         display: block; }
 
-.masthead .copy .button {
-  font-size: 28px; }
+.masthead {
+  width: 78.75em; }
+  .masthead .copy .button {
+    font-size: 28px; }
 
 .branding h1, .branding h2 {
   position: absolute;
@@ -612,6 +614,26 @@ footer.grey-double-border {
   list-style: disc inside; }
 .content ol {
   list-style: decimal inside; }
+
+.work {
+  background: white; }
+  .work .page-tag-blue h3:before, .work .page-tag-blue h3:after {
+    background: white; }
+  .work .ns-button-wrap-blue {
+    background: white; }
+
+.gallery {
+  list-style: none; }
+  .gallery li {
+    width: 18.75em;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: 3.75em; }
+    .gallery li:first-child {
+      margin-left: 0; }
+  .gallery img {
+    width: 100%;
+    height: auto; }
 
 .colophon {
   background: #666666;

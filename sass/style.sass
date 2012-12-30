@@ -44,7 +44,7 @@ a
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2)
   background: url('images/subtnet2_@2x.png')
 .wrapper
-  width: $cols16
+  width: $cols14
   margin: 0 auto
   position: relative
 .copy
@@ -279,10 +279,10 @@ footer.grey-double-border
 //Header
 
 .masthead
+  width: $cols16
   .copy
     .button
       font-size: 28px
-
 .branding
   h1,h2
     position: absolute
@@ -353,6 +353,29 @@ footer.grey-double-border
     list-style: disc inside
   ol
     list-style: decimal inside
+
+//Gallery
+
+.work
+  background: $white
+  .page-tag-blue h3
+    &:before, &:after
+      background: $white
+  .ns-button-wrap-blue
+    background: $white
+
+.gallery
+  list-style: none
+  li
+    width: $cols4
+    display: inline-block
+    box-sizing: border-box
+    margin-left: $cols1
+    &:first-child
+      margin-left: 0
+  img
+    width: 100%
+    height: auto
 
 //Sidebar
 
