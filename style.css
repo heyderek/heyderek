@@ -320,7 +320,7 @@ a {
 
 .copy {
   width: 58.75em;
-  margin: 0 auto 40px;
+  margin: 0 auto 60px;
   position: relative;
   text-align: center; }
 
@@ -545,10 +545,8 @@ footer.grey-double-border {
         margin: 0 auto;
         display: block; }
 
-.masthead {
-  padding: 20px 0; }
-  .masthead .copy .button {
-    font-size: 28px; }
+.masthead .copy .button {
+  font-size: 28px; }
 
 .branding h1, .branding h2 {
   position: absolute;
@@ -556,7 +554,9 @@ footer.grey-double-border {
 .branding .logo {
   width: 13.75em;
   display: block;
-  margin: 0 auto; }
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0 40px; }
   .branding .logo img {
     width: 100%;
     height: auto; }
