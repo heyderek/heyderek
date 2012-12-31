@@ -622,24 +622,36 @@ footer.grey-double-border {
   .work .ns-button-wrap-blue {
     background: white; }
 
+.gallery-wrap {
+  position: relative; }
+
 .gallery {
-  list-style: none; }
+  list-style: none;
+  position: relative;
+  height: 100%; }
   .gallery li {
     width: 18.75em;
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
-    margin-left: 3.75em; }
-    .gallery li:first-child {
-      margin-left: 0; }
+    margin-right: 3.75em;
+    height: 100%;
+    left: 0; }
+    .gallery li:last-child {
+      margin-right: 0; }
   .gallery img {
     width: 100%;
     height: auto; }
     .gallery img:hover {
       cursor: pointer; }
-
-.gallery-copy h5 {
-  font-size: 24px; }
+  .gallery .brief {
+    width: 68.75em;
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    background: white; }
+    .gallery .brief h5 {
+      font-size: 24px; }
 
 .colophon {
   background: #666666;

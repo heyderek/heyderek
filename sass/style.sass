@@ -364,24 +364,35 @@ footer.grey-double-border
   .ns-button-wrap-blue
     background: $white
 
+.gallery-wrap
+  position: relative
 .gallery
   list-style: none
+  position: relative
+  height: 100%
   li
     width: $cols4
     display: inline-block
     vertical-align: top
     box-sizing: border-box
-    margin-left: $cols1
-    &:first-child
-      margin-left: 0
+    margin-right: $cols1
+    height: 100%
+    left: 0
+    &:last-child
+      margin-right: 0
   img
     width: 100%
     height: auto
     &:hover
       cursor: pointer
-.gallery-copy
-  h5
-    font-size: 24px
+  .brief
+    width: $cols14
+    position: absolute
+    left: 0
+    z-index: 9
+    background: $white
+    h5
+      font-size: 24px
 
 
 //Sidebar
