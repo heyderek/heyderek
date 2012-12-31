@@ -641,15 +641,29 @@ footer.grey-double-border {
       margin-right: 0; }
   .gallery img {
     width: 100%;
-    height: auto; }
+    height: auto;
+    margin: 0 0 20px;
+    display: block; }
+    .gallery img:after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      display: block;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background: black; }
     .gallery img:hover {
       cursor: pointer; }
+  .gallery .imgwrap {
+    border: 1px solid #3399cc; }
   .gallery .brief {
     width: 68.75em;
     position: absolute;
     left: 0;
     z-index: 9;
-    background: white; }
+    background: white;
+    padding: 0 0 40px; }
     .gallery .brief h5 {
       font-size: 24px; }
 

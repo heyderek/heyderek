@@ -383,16 +383,31 @@ footer.grey-double-border
   img
     width: 100%
     height: auto
+    margin: 0 0 20px
+    display: block
+    &:after
+      content: ''
+      position: absolute
+      top: 20px
+      display: block
+      left: 0
+      width: 40px
+      height: 40px
+      background: black
     &:hover
       cursor: pointer
+  .imgwrap
+    border: 1px solid $blue
   .brief
     width: $cols14
     position: absolute
     left: 0
     z-index: 9
     background: $white
+    padding: 0 0 40px
     h5
       font-size: 24px
+
 
 
 //Sidebar

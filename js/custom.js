@@ -10,38 +10,33 @@ $(document).ready(function(){
    return false;
  })
  
-/*
- jQuery.fn.log = function (msg) {
-     console.log("%s: %o", msg, this);
-     return this;
- };
-*/
  
+   jQuery.fn.log = function (msg) {
+       console.log("%s: %o", msg, this);
+       return this;
+   };
  
  //Gallery
- var briefHeight = $('.gallery li:first-child').children('.brief').height();
+ var briefHeight = $('.gallery li:first-child').children('.brief').innerHeight();
  
  $('.brief').hide();
  $('.gallery li:first-child').children('.brief').addClass('open').show();
  $('.gallery li:first-child').css('marginBottom', briefHeight);
  
- 
  $('.gallery img').click(function(){
     
-    var hideBrief = $('.brief').slideUp();
+    var hideBrief = $('.brief').hide();
     var showBrief = $(this).next('article');
-    var briefLength = showBrief.height();
+    var briefLength = showBrief.innerHeight();
     
     $('.brief').removeClass('open');
     showBrief.addClass('open');
     $('.brief').parent().css('marginBottom', '0');
     $(this).parent().css('marginBottom', briefLength);
     
-    if(! $(this).hasClass('open')){
-      $(this).removeClass('open');
-      hideBrief;
-      showBrief.slideDown();
-    }
+    $(this).removeClass('open');
+    hideBrief;
+    showBrief.slideDown();
   });
   
 });
