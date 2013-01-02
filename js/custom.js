@@ -26,15 +26,16 @@ $(document).ready(function(){
  $('.gallery img').click(function(){
     
     var hideBrief = $('.brief').hide();
-    var showBrief = $(this).next('article');
+    var showBrief = $(this).parent().next('article');
     var briefLength = showBrief.innerHeight();
     
     $('.brief').removeClass('open');
     showBrief.addClass('open');
+    $('.frame').removeClass('active');
+    $(this).parent().addClass('active');
     $('.brief').parent().css('marginBottom', '0');
-    $(this).parent().css('marginBottom', briefLength);
+    $(this).parents('li').css('marginBottom', briefLength);
     
-    $(this).removeClass('open');
     hideBrief;
     showBrief.slideDown();
   });

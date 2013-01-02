@@ -642,7 +642,6 @@ footer.grey-double-border {
   .gallery img {
     width: 100%;
     height: auto;
-    margin: 0 0 20px;
     display: block; }
     .gallery img:after {
       content: "";
@@ -655,8 +654,20 @@ footer.grey-double-border {
       background: black; }
     .gallery img:hover {
       cursor: pointer; }
-  .gallery .imgwrap {
-    border: 1px solid #3399cc; }
+  .gallery .frame {
+    background: #cccccc;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    position: relative; }
+  .gallery .active:after {
+    content: "";
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent transparent #3399cc transparent;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    bottom: 0; }
   .gallery .brief {
     width: 68.75em;
     position: absolute;

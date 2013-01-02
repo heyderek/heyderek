@@ -383,7 +383,6 @@ footer.grey-double-border
   img
     width: 100%
     height: auto
-    margin: 0 0 20px
     display: block
     &:after
       content: ''
@@ -396,8 +395,22 @@ footer.grey-double-border
       background: black
     &:hover
       cursor: pointer
-  .imgwrap
-    border: 1px solid $blue
+  .frame
+    background: $cees
+    padding: 10px
+    margin: 0 0 $gutter 0
+    position: relative
+  .active
+    &:after
+      content: ''
+      border:
+        width: 20px
+        style: solid
+        color: transparent transparent $blue transparent
+      position: absolute
+      left: 50%
+      margin-left: -20px
+      bottom: 0
   .brief
     width: $cols14
     position: absolute
