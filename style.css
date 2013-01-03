@@ -290,6 +290,8 @@ body {
   font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333333;
   background: #666666; }
+  body em {
+    font-family: "OpenSansLightItalic", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 h1, h3, h5 {
   font-family: "OpenSansCondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -659,7 +661,7 @@ footer.grey-double-border {
     padding: 10px;
     margin: 0 0 20px 0;
     position: relative;
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.65); }
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.35); }
   .gallery .active:after {
     content: "";
     border-width: 20px;
@@ -678,6 +680,11 @@ footer.grey-double-border {
     padding: 0 0 40px; }
     .gallery .brief h5 {
       font-size: 24px; }
+
+.teaser {
+  padding: 20px 0 40px;
+  font-size: 24px;
+  text-align: center; }
 
 .colophon {
   background: #666666;

@@ -24,6 +24,8 @@ body
   @include OpenSansLight
   color: $threes
   background: $sixes
+  em
+    @include OpenSansLightItalic
 h1,h3,h5
   @include OpenSansCondensedBold
   text-transform: uppercase
@@ -401,7 +403,7 @@ footer.grey-double-border
     padding: 10px
     margin: 0 0 $gutter 0
     position: relative
-    box-shadow: 0 -1px 5px rgba(0,0,0,.65)
+    box-shadow: 0 -1px 3px rgba(0,0,0,.35)
   .active
     &:after
       content: ''
@@ -422,6 +424,10 @@ footer.grey-double-border
     padding: 0 0 40px
     h5
       font-size: 24px
+.teaser
+  padding: 20px 0 40px
+  font-size: 24px
+  text-align: center
 
 
 
