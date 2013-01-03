@@ -19,7 +19,7 @@ $threes: #333
 //General
 
 html, body
-  overlow-x: hidden
+  overflow-x: hidden
 body
   @include OpenSansLight
   color: $threes
@@ -355,6 +355,15 @@ footer.grey-double-border
     list-style: disc inside
   ol
     list-style: decimal inside
+.tags
+  a
+    background: $orange
+    color: $white
+    padding: 5px 10px
+    border-radius: 5px
+    display: block
+    &:hover
+      background: $lt_orange
 
 //Gallery
 
@@ -372,8 +381,7 @@ footer.grey-double-border
   list-style: none
   position: relative
   height: 100%
-  
-  li
+  &>li
     width: $cols4
     display: inline-block
     vertical-align: top
@@ -387,23 +395,12 @@ footer.grey-double-border
     width: 100%
     height: auto
     display: block
-    &:after
-      content: ''
-      position: absolute
-      top: 20px
-      display: block
-      left: 0
-      width: 40px
-      height: 40px
-      background: black
-    &:hover
-      cursor: pointer
   .frame
-    background: $white
-    padding: 10px
     margin: 0
     position: relative
     box-shadow: 0 -1px 3px rgba(0,0,0,.35)
+    img
+      cursor: pointer
   .active
     &:after
       content: ''
@@ -418,12 +415,12 @@ footer.grey-double-border
   .brief
     width: $cols14
     position: absolute
-    left: 0
+    padding: 20px 100%
+    left: -100%
     z-index: 9
     background: linear-gradient(to bottom, $cees 0%,  $white 100%)
     background: linear-gradient(top, $cees 0%, $white 100%)
-    margin: 0 0 20px
-    border-radius: 8px
+    //border-radius: 8px
     h5
       font-size: 24px
     .port-devices, .info
@@ -435,12 +432,15 @@ footer.grey-double-border
       width: $cols5
     .info
       width: $cols9
+  .tags
+    margin: 0
+    padding: 0
+    li
+      display: inline-block
 .teaser
   padding: 20px 0 40px
   font-size: 24px
   text-align: center
-
-
 
 //Sidebar
 

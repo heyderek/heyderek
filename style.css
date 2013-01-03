@@ -284,7 +284,7 @@ body {
   font-style: normal; }
 
 html, body {
-  overlow-x: hidden; }
+  overflow-x: hidden; }
 
 body {
   font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -617,6 +617,15 @@ footer.grey-double-border {
 .content ol {
   list-style: decimal inside; }
 
+.tags a {
+  background: #ff3300;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block; }
+  .tags a:hover {
+    background: #ff6600; }
+
 .work {
   background: white; }
   .work .page-tag-blue h3:before, .work .page-tag-blue h3:after {
@@ -631,7 +640,7 @@ footer.grey-double-border {
   list-style: none;
   position: relative;
   height: 100%; }
-  .gallery li {
+  .gallery > li {
     width: 18.75em;
     display: inline-block;
     vertical-align: top;
@@ -639,29 +648,18 @@ footer.grey-double-border {
     margin-right: 5.938em;
     height: 100%;
     left: 0; }
-    .gallery li:nth-child(3n) {
+    .gallery > li:nth-child(3n) {
       margin-right: 0; }
   .gallery img {
     width: 100%;
     height: auto;
     display: block; }
-    .gallery img:after {
-      content: "";
-      position: absolute;
-      top: 20px;
-      display: block;
-      left: 0;
-      width: 40px;
-      height: 40px;
-      background: black; }
-    .gallery img:hover {
-      cursor: pointer; }
   .gallery .frame {
-    background: white;
-    padding: 10px;
     margin: 0;
     position: relative;
     box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.35); }
+    .gallery .frame img {
+      cursor: pointer; }
   .gallery .active:after {
     content: "";
     border-width: 20px;
@@ -674,12 +672,11 @@ footer.grey-double-border {
   .gallery .brief {
     width: 68.75em;
     position: absolute;
-    left: 0;
+    padding: 20px 100%;
+    left: -100%;
     z-index: 9;
     background: linear-gradient(to bottom, #cccccc 0%, white 100%);
-    background: linear-gradient(top, #cccccc 0%, white 100%);
-    margin: 0 0 20px;
-    border-radius: 8px; }
+    background: linear-gradient(top, #cccccc 0%, white 100%); }
     .gallery .brief h5 {
       font-size: 24px; }
     .gallery .brief .port-devices, .gallery .brief .info {
@@ -691,6 +688,11 @@ footer.grey-double-border {
       width: 23.75em; }
     .gallery .brief .info {
       width: 43.75em; }
+  .gallery .tags {
+    margin: 0;
+    padding: 0; }
+    .gallery .tags li {
+      display: inline-block; }
 
 .teaser {
   padding: 20px 0 40px;
