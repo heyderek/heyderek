@@ -735,10 +735,15 @@ footer.grey-double-border {
   .masthead {
     width: 38.75em; }
 
+  .access .menu-right, .access .menu-left {
+    text-align: center;
+    top: 15%; }
   .access .menu-right {
     width: 8.75em; }
   .access .menu-left {
     width: 8.75em; }
+  .access a {
+    padding: 20px 10px; }
 
   .wrapper {
     width: 38.75em; }
