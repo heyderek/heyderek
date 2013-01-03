@@ -659,7 +659,7 @@ footer.grey-double-border {
   .gallery .frame {
     background: white;
     padding: 10px;
-    margin: 0 0 20px 0;
+    margin: 0;
     position: relative;
     box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.35); }
   .gallery .active:after {
@@ -676,10 +676,21 @@ footer.grey-double-border {
     position: absolute;
     left: 0;
     z-index: 9;
-    background: white;
-    padding: 0 0 40px; }
+    background: linear-gradient(to bottom, #cccccc 0%, white 100%);
+    background: linear-gradient(top, #cccccc 0%, white 100%);
+    margin: 0 0 20px;
+    border-radius: 8px; }
     .gallery .brief h5 {
       font-size: 24px; }
+    .gallery .brief .port-devices, .gallery .brief .info {
+      display: inline-block;
+      box-sizing: border-box;
+      vertical-align: top;
+      padding: 20px; }
+    .gallery .brief .port-devices {
+      width: 23.75em; }
+    .gallery .brief .info {
+      width: 43.75em; }
 
 .teaser {
   padding: 20px 0 40px;

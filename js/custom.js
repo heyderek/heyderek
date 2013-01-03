@@ -20,8 +20,10 @@ $(document).ready(function(){
  var briefHeight = $('.gallery li:first-child').children('.brief').innerHeight();
  
  $('.brief').hide();
+ $('')
  $('.gallery li:first-child').children('.brief').addClass('open').show();
  $('.gallery li:first-child').css('marginBottom', briefHeight);
+ $('.gallery li:first-child').find('.frame').addClass('active');
  
  $('.gallery img').click(function(){
     

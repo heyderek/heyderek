@@ -401,7 +401,7 @@ footer.grey-double-border
   .frame
     background: $white
     padding: 10px
-    margin: 0 0 $gutter 0
+    margin: 0
     position: relative
     box-shadow: 0 -1px 3px rgba(0,0,0,.35)
   .active
@@ -420,10 +420,21 @@ footer.grey-double-border
     position: absolute
     left: 0
     z-index: 9
-    background: $white
-    padding: 0 0 40px
+    background: linear-gradient(to bottom, $cees 0%,  $white 100%)
+    background: linear-gradient(top, $cees 0%, $white 100%)
+    margin: 0 0 20px
+    border-radius: 8px
     h5
       font-size: 24px
+    .port-devices, .info
+      display: inline-block
+      box-sizing: border-box
+      vertical-align: top
+      padding: 20px
+    .port-devices
+      width: $cols5
+    .info
+      width: $cols9
 .teaser
   padding: 20px 0 40px
   font-size: 24px
