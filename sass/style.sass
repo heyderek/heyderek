@@ -370,15 +370,16 @@ footer.grey-double-border
   list-style: none
   position: relative
   height: 100%
+  
   li
     width: $cols4
     display: inline-block
     vertical-align: top
     box-sizing: border-box
-    margin-right: $cols1
+    margin-right: $cols1 + (($gutter/$em)*1.75)
     height: 100%
     left: 0
-    &:last-child
+    &:nth-child(3n)
       margin-right: 0
   img
     width: 100%
@@ -396,17 +397,18 @@ footer.grey-double-border
     &:hover
       cursor: pointer
   .frame
-    background: $cees
+    background: $white
     padding: 10px
     margin: 0 0 $gutter 0
     position: relative
+    box-shadow: 0 -1px 5px rgba(0,0,0,.65)
   .active
     &:after
       content: ''
       border:
         width: 20px
         style: solid
-        color: transparent transparent $blue transparent
+        color: transparent transparent $cees transparent
       position: absolute
       left: 50%
       margin-left: -20px

@@ -634,10 +634,10 @@ footer.grey-double-border {
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
-    margin-right: 3.75em;
+    margin-right: 5.938em;
     height: 100%;
     left: 0; }
-    .gallery li:last-child {
+    .gallery li:nth-child(3n) {
       margin-right: 0; }
   .gallery img {
     width: 100%;
@@ -655,15 +655,16 @@ footer.grey-double-border {
     .gallery img:hover {
       cursor: pointer; }
   .gallery .frame {
-    background: #cccccc;
+    background: white;
     padding: 10px;
     margin: 0 0 20px 0;
-    position: relative; }
+    position: relative;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.65); }
   .gallery .active:after {
     content: "";
     border-width: 20px;
     border-style: solid;
-    border-color: transparent transparent #3399cc transparent;
+    border-color: transparent transparent #cccccc transparent;
     position: absolute;
     left: 50%;
     margin-left: -20px;
