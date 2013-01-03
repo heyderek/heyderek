@@ -17,12 +17,13 @@ $(document).ready(function(){
    };
 
  //Gallery
-   var briefHeight = $('.gallery > li:first-child article').height();
-   
+   /* var briefHeight = $('.gallery > li:first-child article').height(); */
+
    $('.brief').hide();
+
    $('.gallery > li:first-child').find('.frame').addClass('active');
    $('.gallery > li:first-child').children('.brief').addClass('open').show();
-   $('.gallery > li:first-child').css('marginBottom', 352);
+   $('.gallery > li:first-child').css('marginBottom', briefHeight);
  
   $('.gallery .frame > img').click(function(){
     
