@@ -633,9 +633,6 @@ footer.grey-double-border {
   .work .ns-button-wrap-blue {
     background: white; }
 
-.gallery-wrap {
-  position: relative; }
-
 .gallery {
   list-style: none;
   position: relative;
@@ -650,6 +647,8 @@ footer.grey-double-border {
     left: 0; }
     .gallery > li:nth-child(3n) {
       margin-right: 0; }
+    .gallery > li:nth-child(n+4) {
+      margin-top: 20px; }
   .gallery img {
     width: 100%;
     height: auto;
