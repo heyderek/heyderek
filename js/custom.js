@@ -15,9 +15,17 @@ $(document).ready(function(){
        console.log("%s: %o", msg, this);
        return this;
    };
+  
+  $('.shownav').click(function(){
+    $('.access').slideDown();
+    $('.shownav').click(function(){
+      $('.access').slideUp();
+    });
+  });
+
 
  //Gallery
-   /* var briefHeight = $('.gallery > li:first-child article').height(); */
+   var briefHeight = $('.gallery > li:first-child article').height();
 
    $('.brief').hide();
 

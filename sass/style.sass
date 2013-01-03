@@ -285,6 +285,8 @@ footer.grey-double-border
   .copy
     .button
       font-size: 28px
+.shownav
+  display: none
 .branding
   h1,h2
     position: absolute
@@ -413,7 +415,7 @@ footer.grey-double-border
       margin-left: -20px
       bottom: 0
   .brief
-    width: $cols14
+    width: 100%
     position: absolute
     padding: 20px 100%
     left: -100%
@@ -437,6 +439,7 @@ footer.grey-double-border
     padding: 0
     li
       display: inline-block
+      margin: 0 0 5px 
 .teaser
   padding: 20px 0 40px
   font-size: 24px
@@ -462,3 +465,84 @@ footer.grey-double-border
     padding: 40px 0
 
 //Break Points
+
+@media screen and (min-width: 960px) and (max-width: 1219px)
+
+  .masthead
+    width: $cols12
+  .access
+    .menu-right
+      width: $cols4
+    .menu-left
+      width: $cols4
+  .wrapper
+    width: $cols12
+  .copy
+    width: $cols10
+
+@media screen and (min-width: 540px) and (max-width: 959px)
+
+  .masthead
+    width: $cols8
+  .access
+    .menu-right
+      width: $cols2
+    .menu-left
+      width: $cols2
+  .wrapper
+    width: $cols8
+  .copy
+    width: $cols8
+  .gallery
+    &>li
+      width: $cols3 - 2em
+      margin-right: 20px
+      .brief
+        .port-devices, .info
+          display: block
+          width: 100%
+        .port-devices
+          width: $cols5
+          margin: 0 auto
+        .info
+
+@media screen and (min-width: 0px) and (max-width: 539px)
+
+  .masthead
+    width: $cols4
+  .shownav
+    display: block
+    margin: 0 auto 20px
+  .branding
+    .logo
+      padding: $gutter 0
+  .access
+    display: none
+    border: 1px solid $nines
+    margin: 0 0 20px
+    border-radius: 8px
+    .menu-right, .menu-left
+      width: 100%
+      display: block
+      text-align: center
+      position: relative
+      border: none
+      li
+        display: block
+  .wrapper
+    width: $cols4
+  .copy
+    width: $cols4
+  .gallery
+    &>li
+      width: $cols4
+      margin: 0 auto
+      display: block
+      .brief
+        .port-devices, .info
+          display: block
+          width: 100%
+        .port-devices
+          width: $cols4
+          margin: 0 auto
+        .info
