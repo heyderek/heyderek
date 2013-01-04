@@ -55,7 +55,7 @@ $(document).ready(function(){
      $('.gallery > li:first-child').find('.frame').addClass('active');
      $('.gallery > li:first-child').children('.brief').addClass('open').show();
      $('.gallery > li:first-child').css('marginBottom', briefHeight);
-   }, 50)
+   }, 100)
 
 
     briefHeight = $('.brief:first').innerHeight();
