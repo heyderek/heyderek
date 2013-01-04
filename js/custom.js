@@ -36,11 +36,14 @@ $(document).ready(function(){
     }
   });
   //Fix mobile nav on browser resize
-  if(docWidth > 539){
-      $('.access').show();
-    } else {
-      $('.access').hide();
-    }
+  $(window).resize(function(){
+    var docWidth = $(window).width();
+
+    if(docWidth > 539){
+        $('.access').show();
+      } else {
+        $('.access').hide();
+      }
   });
 
  //Gallery
@@ -54,8 +57,6 @@ $(document).ready(function(){
      $('.gallery > li:first-child').css('marginBottom', briefHeight);
    }, 50)
 
-  $(window).resize(function(){
-    var docWidth = $(window).width();
 
     briefHeight = $('.brief:first').innerHeight();
     $('.gallery > li:first-child').css('marginBottom', briefHeight);
