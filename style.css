@@ -322,7 +322,7 @@ a {
 
 .copy {
   width: 58.75em;
-  margin: 0 auto 60px;
+  margin: 0 auto;
   position: relative;
   text-align: center; }
 
@@ -565,6 +565,13 @@ footer.grey-double-border {
 
 .masthead .copy .button {
   font-size: 28px; }
+.masthead .graphic {
+  width: 18.75em;
+  text-align: center;
+  margin: 40px auto 0; }
+  .masthead .graphic img {
+    width: 100%;
+    height: auto; }
 
 .shownav {
   display: none; }
