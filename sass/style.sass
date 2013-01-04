@@ -537,11 +537,29 @@ footer.grey-double-border
   .masthead
     width: $cols4
   .shownav
+    @include OpenSansLight
     display: block
     margin: 0 auto 20px
+    position: relative
+    padding: 10px
+    border-radius: 5px
+    box-shadow: 0 1px 3px rgba(0,0,0,.5)
+    border: none
+    background: $blue
+    width: 100%
+    color: $white
+    &:after
+      content: ''
+      position: absolute
+      top: 35%
+      right: 10px
+      border:
+        width: 15px
+        color: $white transparent transparent transparent
+        style: solid
   .branding
     .logo
-      padding: $gutter 0
+      padding: 50px 0 $gutter
   .access
     display: none
     border: 1px solid $nines
