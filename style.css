@@ -289,13 +289,15 @@ body {
   .logo.ready {
     top: 0;
     opacity: 1;
-    transition: all 1s linear; }
+    transition: all 1s linear;
+    -webkit-transition: all 1s linear; }
 
 .copy {
   opacity: 0; }
   .copy.ready {
     opacity: 1;
-    transition: opacity 1s linear; }
+    transition: opacity 1s linear;
+    -webkit-transition: opacity 1s linear; }
 
 html, body {
   overflow-x: hidden; }
