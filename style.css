@@ -283,6 +283,20 @@ body {
   font-weight: normal;
   font-style: normal; }
 
+.logo {
+  top: -15em;
+  opacity: 0; }
+  .logo.ready {
+    top: 0;
+    opacity: 1;
+    transition: all 1s linear; }
+
+.copy {
+  opacity: 0; }
+  .copy.ready {
+    opacity: 1;
+    transition: opacity 1s linear; }
+
 html, body {
   overflow-x: hidden; }
 
@@ -638,15 +652,13 @@ footer.grey-double-border {
 
 .gallery {
   list-style: none;
-  position: relative;
-  height: 100%; }
+  position: relative; }
   .gallery > li {
     width: 18.75em;
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
     margin-right: 5.938em;
-    height: 100%;
     left: 0; }
     .gallery > li:nth-child(3n) {
       margin-right: 0; }
@@ -678,7 +690,8 @@ footer.grey-double-border {
     left: -100%;
     z-index: 9;
     background: linear-gradient(to bottom, #cccccc 0%, white 100%);
-    background: linear-gradient(top, #cccccc 0%, white 100%); }
+    background: linear-gradient(top, #cccccc 0%, white 100%);
+    display: none; }
     .gallery .brief h5 {
       font-size: 24px; }
     .gallery .brief .port-devices, .gallery .brief .info {

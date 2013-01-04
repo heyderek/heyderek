@@ -1,8 +1,10 @@
 $(document).ready(function(){
-  var hideCopy = $('.copy').hide();
-
-  hideCopy.fadeIn(2000);
-  $('.logo').css('top', '-15em').animate({ top: '0'}, 750, function(){});
+  //var hideCopy = $('.copy').hide();
+  
+  //hideCopy.fadeIn(2000);
+  //$('.logo').css('top', '-15em').animate({ top: '0'}, 750, function(){});
+  
+  $('.logo, .copy').addClass('ready');
   
     //Scrollto functionality for navigation
  $('a#work').bind('click', function(){
@@ -25,29 +27,42 @@ $(document).ready(function(){
    $.scrollTo('.page',{'duration':'fast'});
    return false;
  });
- 
- 
-   jQuery.fn.log = function (msg) {
-       console.log("%s: %o", msg, this);
-       return this;
-   };
   
   $('.shownav').click(function(){
-    $('.access').slideDown();
-    $('.shownav').click(function(){
+    if ($(this).hasClass('open')){
+      $(this).removeClass('open');
       $('.access').slideUp();
-    });
+    } else {
+      $(this).addClass('open');
+      $('.access').slideDown();
+    }
   });
 
 
  //Gallery
-   var briefHeight = $('.gallery > li:first-child article').height();
-
-   $('.brief').hide();
-
-   $('.gallery > li:first-child').find('.frame').addClass('active');
-   $('.gallery > li:first-child').children('.brief').addClass('open').show();
-   $('.gallery > li:first-child').css('marginBottom', briefHeight);
+   var briefHeight;
+   
+   $('.brief:first').show();
+   setTimeout(function(){
+     briefHeight = $('.brief:first').innerHeight();
+     $('.gallery > li:first-child').find('.frame').addClass('active');
+     $('.gallery > li:first-child').children('.brief').addClass('open').show();
+     $('.gallery > li:first-child').css('marginBottom', briefHeight);
+   }, 50)
+ 
+  $(window).resize(function(){
+    var docWidth = $(window).width();
+    
+    briefHeight = $('.brief:first').innerHeight();
+    $('.gallery > li:first-child').css('marginBottom', briefHeight);
+    
+    //console.log('docwidth :', docWidth);
+    if(docWidth > 539){
+      $('.access').show();
+    } else {
+      $('.access').hide();
+    }
+  });
  
   $('.gallery .frame > img').click(function(){
     

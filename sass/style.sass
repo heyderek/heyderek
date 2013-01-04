@@ -16,7 +16,23 @@ $sixes: #666
 $nines: #999
 $threes: #333
 
-//General
+//General  
+  
+.logo
+  top: -15em
+  opacity: 0
+  
+  &.ready
+    top: 0
+    opacity: 1
+    transition: all 1s linear
+    
+.copy
+  opacity: 0
+  
+  &.ready
+    opacity: 1
+    transition: opacity 1s linear
 
 html, body
   overflow-x: hidden
@@ -380,14 +396,12 @@ footer.grey-double-border
 .gallery
   list-style: none
   position: relative
-  height: 100%
   &>li
     width: $cols4
     display: inline-block
     vertical-align: top
     box-sizing: border-box
     margin-right: $cols1 + (($gutter/$em)*1.75)
-    height: 100%
     left: 0
     &:nth-child(3n)
       margin-right: 0
@@ -422,6 +436,7 @@ footer.grey-double-border
     z-index: 9
     background: linear-gradient(to bottom, $cees 0%,  $white 100%)
     background: linear-gradient(top, $cees 0%, $white 100%)
+    display: none
     //border-radius: 8px
     h5
       font-size: 24px
