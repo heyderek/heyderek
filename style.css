@@ -283,22 +283,6 @@ body {
   font-weight: normal;
   font-style: normal; }
 
-.logo {
-  top: -15em;
-  opacity: 0; }
-  .logo.ready {
-    top: 0;
-    opacity: 1;
-    transition: all 1s linear;
-    -webkit-transition: all 1s linear; }
-
-.copy {
-  opacity: 0; }
-  .copy.ready {
-    opacity: 1;
-    transition: opacity 1s linear;
-    -webkit-transition: opacity 1s linear; }
-
 html, body {
   overflow-x: hidden; }
 
@@ -562,6 +546,22 @@ footer.grey-double-border {
         content: "]";
         margin: 0 auto;
         display: block; }
+
+.logo {
+  top: -15em;
+  opacity: 0; }
+  .logo.ready {
+    top: 0;
+    opacity: 1;
+    transition: all 1s linear;
+    -webkit-transition: all 1s linear; }
+
+.copy {
+  opacity: 0; }
+  .copy.ready {
+    opacity: 1;
+    transition: opacity 1s linear;
+    -webkit-transition: opacity 1s linear; }
 
 .masthead {
   width: 78.75em; }
