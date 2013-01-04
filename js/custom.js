@@ -1,33 +1,31 @@
 $(document).ready(function(){
-  //var hideCopy = $('.copy').hide();
-  
-  //hideCopy.fadeIn(2000);
-  //$('.logo').css('top', '-15em').animate({ top: '0'}, 750, function(){});
-  
+
+  //Add Classes for CSS3 Animations
   $('.logo, .copy').addClass('ready');
-  
+
     //Scrollto functionality for navigation
- $('a#work').bind('click', function(){
-   $.scrollTo('.work',{'duration':'fast'});
-   return false;
- });
-  $('a#about').bind('click', function(){
-   $.scrollTo('.about',{'duration':'fast'});
-   return false;
+  $('a#work').click(function(){
+    $.scrollTo('.work', {'duration':'fast'});
+    return false;
   });
-  $('a#contact').bind('click', function(){
-   $.scrollTo('.contact',{'duration':'fast'});
-   return false;
+  $('a#about').click(function(){
+    $.scrollTo('.about', {'duration':'fast'});
+    return false;
   });
- $('button#chat').bind('click', function(){
-   $.scrollTo('.contact',{'duration':'fast'});
-   return false;
- });
- $('button.tothetop').bind('click', function(){
-   $.scrollTo('.page',{'duration':'fast'});
-   return false;
- });
-  
+  $('a#contact').click(function(){
+    $.scrollTo('.contact', {'duration':'fast'});
+    return false;
+  });
+  $('button#chat').click(function(){
+    $.scrollTo('.contact', {'duration':'fast'});
+    return false;
+  });
+  $('button.tothetop').click(function(){
+    $.scrollTo('.page', {'duration':'fast'});
+    return false;
+  });
+
+  //Mobile Navigation button
   $('.shownav').click(function(){
     if ($(this).hasClass('open')){
       $(this).removeClass('open');
@@ -37,7 +35,6 @@ $(document).ready(function(){
       $('.access').slideDown();
     }
   });
-
 
  //Gallery
    var briefHeight;
