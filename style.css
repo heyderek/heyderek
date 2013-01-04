@@ -795,13 +795,13 @@ footer.grey-double-border {
     width: 100%;
     color: white; }
     .shownav:after {
-      content: "";
+      font-family: "ModernPictogramsNormal";
+      content: "Z";
       position: absolute;
-      top: 35%;
-      right: 10px;
-      border-width: 15px;
-      border-color: white transparent transparent transparent;
-      border-style: solid; }
+      font-size: 55px;
+      top: 0;
+      line-height: 45px;
+      right: 10px; }
 
   .branding .logo {
     padding: 20px 0; }
