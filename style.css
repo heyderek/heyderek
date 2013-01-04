@@ -566,7 +566,7 @@ footer.grey-double-border {
 .masthead .copy .button {
   font-size: 28px; }
 .masthead .graphic {
-  width: 18.75em;
+  width: 38.75em;
   text-align: center;
   margin: 40px auto 0; }
   .masthead .graphic img {
@@ -832,6 +832,8 @@ footer.grey-double-border {
 
   .copy {
     width: 18.75em; }
+    .copy .graphic {
+      width: 18.75em; }
 
   .gallery > li {
     width: 18.75em;
