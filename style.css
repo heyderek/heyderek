@@ -597,7 +597,7 @@ footer.grey-double-border {
     border-bottom: 1px solid #999999;
     width: 25.75em;
     position: absolute;
-    top: 20%; }
+    top: 6em; }
     .access ul li {
       display: inline-block; }
   .access a {
@@ -765,7 +765,6 @@ footer.grey-double-border {
 
   .access .menu-right, .access .menu-left {
     text-align: center;
-    top: 15%;
     width: 10.75em; }
   .access a {
     padding: 20px 10px; }
@@ -820,6 +819,7 @@ footer.grey-double-border {
     border-radius: 8px; }
     .access .menu-right, .access .menu-left {
       width: 100%;
+      top: 0;
       display: block;
       text-align: center;
       position: relative;
