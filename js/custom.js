@@ -3,7 +3,7 @@ $(document).ready(function(){
   //Add Classes for CSS3 Animations
   $('.logo, .copy').addClass('ready');
 
-    //Scrollto functionality for navigation
+  //Scrollto functionality for navigation
   $('a#work').click(function(){
     $.scrollTo('.work', {'duration':'fast'});
     return false;
@@ -25,7 +25,7 @@ $(document).ready(function(){
     return false;
   });
 
-  //Mobile Navigation button
+  //Mobile navigation button
   $('.shownav').click(function(){
     if ($(this).hasClass('open')){
       $(this).removeClass('open');
@@ -33,6 +33,13 @@ $(document).ready(function(){
     } else {
       $(this).addClass('open');
       $('.access').slideDown();
+    }
+  });
+  //Fix mobile nav on browser resize
+  if(docWidth > 539){
+      $('.access').show();
+    } else {
+      $('.access').hide();
     }
   });
 
@@ -46,21 +53,15 @@ $(document).ready(function(){
      $('.gallery > li:first-child').children('.brief').addClass('open').show();
      $('.gallery > li:first-child').css('marginBottom', briefHeight);
    }, 50)
- 
+
   $(window).resize(function(){
     var docWidth = $(window).width();
-    
+
     briefHeight = $('.brief:first').innerHeight();
     $('.gallery > li:first-child').css('marginBottom', briefHeight);
-    
+
     //console.log('docwidth :', docWidth);
-    if(docWidth > 539){
-      $('.access').show();
-    } else {
-      $('.access').hide();
-    }
-  });
- 
+
   $('.gallery .frame > img').click(function(){
     
     var hideBrief = $('.brief').hide();
@@ -73,7 +74,7 @@ $(document).ready(function(){
     $(this).parent().addClass('active');
     $('.brief').parent().css('marginBottom', '0');
     $(this).parents('.gallery > li').css('marginBottom', briefLength);
-    
+
     hideBrief;
     showBrief.slideDown();
   });
