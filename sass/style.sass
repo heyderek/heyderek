@@ -298,7 +298,6 @@ footer.grey-double-border
 //Header
 
 .masthead
-  width: $cols16
   .copy
     .button
       font-size: 28px
@@ -324,7 +323,7 @@ footer.grey-double-border
     border:
       top: 1px solid $nines
       bottom: 1px solid $nines
-    width: $cols6
+    width: $cols6 - 3em
     position: absolute
     top: 20%
     li
@@ -495,6 +494,16 @@ footer.grey-double-border
     width: $cols12
   .copy
     width: $cols10
+  .gallery
+    &>li
+      width: $cols4 - 3em
+      margin-right: $cols1 + (($gutter/$em)*1.25)
+      .brief
+        .port-devices
+          width: $cols4
+        .info
+          width: $cols6
+
 
 @media screen and (min-width: 540px) and (max-width: 959px)
 
@@ -522,7 +531,6 @@ footer.grey-double-border
         .port-devices
           width: $cols5
           margin: 0 auto
-        .info
 
 @media screen and (min-width: 0px) and (max-width: 539px)
 
@@ -563,4 +571,3 @@ footer.grey-double-border
         .port-devices
           width: $cols4
           margin: 0 auto
-        .info

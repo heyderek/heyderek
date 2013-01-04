@@ -563,10 +563,8 @@ footer.grey-double-border {
     transition: opacity 1s linear;
     -webkit-transition: opacity 1s linear; }
 
-.masthead {
-  width: 78.75em; }
-  .masthead .copy .button {
-    font-size: 28px; }
+.masthead .copy .button {
+  font-size: 28px; }
 
 .shownav {
   display: none; }
@@ -590,7 +588,7 @@ footer.grey-double-border {
   .access ul {
     border-top: 1px solid #999999;
     border-bottom: 1px solid #999999;
-    width: 28.75em;
+    width: 25.75em;
     position: absolute;
     top: 20%; }
     .access ul li {
@@ -745,7 +743,15 @@ footer.grey-double-border {
     width: 58.75em; }
 
   .copy {
-    width: 48.75em; } }
+    width: 48.75em; }
+
+  .gallery > li {
+    width: 15.75em;
+    margin-right: 5.313em; }
+    .gallery > li .brief .port-devices {
+      width: 18.75em; }
+    .gallery > li .brief .info {
+      width: 28.75em; } }
 @media screen and (min-width: 540px) and (max-width: 959px) {
   .masthead {
     width: 38.75em; }
