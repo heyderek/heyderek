@@ -737,11 +737,8 @@ footer.grey-double-border {
 
   .access .menu-right, .access .menu-left {
     text-align: center;
-    top: 15%; }
-  .access .menu-right {
-    width: 8.75em; }
-  .access .menu-left {
-    width: 8.75em; }
+    top: 15%;
+    width: 10.75em; }
   .access a {
     padding: 20px 10px; }
 
