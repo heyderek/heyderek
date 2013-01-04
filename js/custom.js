@@ -17,6 +17,10 @@ $(document).ready(function(){
    $.scrollTo('.contact',{'duration':'fast'});
    return false;
   });
+ $('button#chat').bind('click', function(){
+   $.scrollTo('.contact',{'duration':'fast'});
+   return false;
+ });
  $('button.tothetop').bind('click', function(){
    $.scrollTo('.page',{'duration':'fast'});
    return false;
