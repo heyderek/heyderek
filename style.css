@@ -153,11 +153,11 @@ textarea {
 
 /*	These are easy to forget */
 ::selection {
-  background: red;
+  background: #3399cc;
   color: white; }
 
 ::-moz-selection {
-  background: red;
+  background: #3399cc;
   color: white; }
 
 img::selection {

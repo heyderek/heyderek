@@ -5,10 +5,22 @@ $(document).ready(function(){
   $('.logo').css('top', '-15em').animate({ top: '0'}, 750, function(){});
   
     //Scrollto functionality for navigation
+ $('a#work').bind('click', function(){
+   $.scrollTo('.work',{'duration':'fast'});
+   return false;
+ });
+  $('a#about').bind('click', function(){
+   $.scrollTo('.about',{'duration':'fast'});
+   return false;
+  });
+  $('a#contact').bind('click', function(){
+   $.scrollTo('.contact',{'duration':'fast'});
+   return false;
+  });
  $('button.tothetop').bind('click', function(){
    $.scrollTo('.page',{'duration':'fast'});
    return false;
- })
+ });
  
  
    jQuery.fn.log = function (msg) {
