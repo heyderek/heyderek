@@ -654,9 +654,10 @@ footer.grey-double-border {
 .tags a {
   background: #ff3300;
   color: white;
-  padding: 5px 10px;
+  padding: 10px;
   border-radius: 5px;
-  display: block; }
+  display: inline-block;
+  margin: 0 2px 5px 0; }
   .tags a:hover {
     background: #ff6600; }
 

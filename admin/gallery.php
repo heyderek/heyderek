@@ -35,3 +35,29 @@ function gallery_init() {
 }
 
 add_action( 'init', 'gallery_init' );
+
+function project_tax_init() {
+  $labels = array(
+    'name' => _x('pTags','taxonomy general name'),
+    'singular_name' => _x('pTag', 'taxonomy singular name'),
+    'search_items' => __('Search pTags'),
+    'all_items' => __('All pTags'),
+    'parent_item' => __('Parent pTags'),
+    'parent_item_colon' => __('Parent pTags:'),
+    'edit_item' => __('Edit pTags'),
+    'update_item' => __('Update pTags'),
+    'add_new_item' => __('Add New pTag'),
+    'new_item_name' => __('New ptag Name'),
+    'menu_name' => __('pTags'),
+  );
+  register_taxonomy('ptags',array('project'),array(
+    'labels' => $labels,
+    'public' => true,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'hierarchical' => false,
+    'query_var' => true,
+    'rewrite' => array('slug' => 'ptag'),
+  ));
+}
+add_action('init', 'project_tax_init', 0);

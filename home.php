@@ -4,27 +4,32 @@
             <header class="page-tag-blue grey-double-border">
               <h3 class="blue">My Work</h3>
             </header><!-- /.page-tag-wrap -->
-            
             <ul class="gallery">
                 <?php
                 $args = array(
-                  'post_type' => 'project'
+                  'post_type' => 'project',
+                  'posts_per_page' => 3
                 );
-                
                 $project = new WP_Query($args); ?>
-                
                 <?php while($project->have_posts()) : $project->the_post(); ?>
-                
                 <li>
                   <div class="frame">
                     <?php the_post_thumbnail(); ?>
                   </div><!-- /.frame -->
                   <article class="content brief">
-                    <h5><?php the_title(); ?></h5>
-                    <?php the_content(); ?>
+                    <div class="port-devices">
+                      <?php $propic = get_post_meta($post->ID, '_cmb_project_image', true); ?>
+                      <img src="<?php echo $propic; ?>" />
+                    </div><!-- /.port-devices -->
+                    <div class="info">
+                      <h5><?php the_title(); ?></h5>
+                      <?php the_content(); ?>
+                      <footer class="tags">
+                        <?php the_terms($project->ID, 'ptags','', ''); ?>
+                      </footer><!--/.tags-->
+                    </div><!-- /.info -->
                   </article><!-- /.brief -->
                 </li>
-                
                 <?php endwhile; ?>
             </ul><!-- /.gallery -->
             <div class="teaser"><em>Want More?  <a href="#">Get more portfolio action here.</a></em></div>
