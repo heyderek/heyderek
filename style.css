@@ -698,6 +698,8 @@ footer.grey-double-border {
 
 .description {
   text-align: center; }
+  .description p {
+    margin: 0 0 40px; }
 
 .post {
   width: 58.75em;

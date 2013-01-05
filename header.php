@@ -39,6 +39,7 @@
           </a><!-- /.logo -->
         </hgroup><!-- /.branding -->
         <button class="shownav">Navigation</button>
+        <?php if ( is_front_page() || is_home() ) : ?>
         <nav class="access">
           <ul class="menu-left">
             <li><a href="<?php echo home_url( '/' ); ?>">Home</a></li>
@@ -49,7 +50,6 @@
             <li><a href="#" id="contact">Contact</a></li>
           </ul>
         </nav>
-        <?php if ( is_front_page() || is_home() ) : ?>
         <div class="copy content">
           <h1>The web is a beautiful place, I'm just doing my best to help keep it that way.</h1>
           <h2>And I do it using HTML5 and CSS3 to serve sparklingly responsive layouts to the masses.</h2>
@@ -58,5 +58,17 @@
             <img src="<?php bloginfo('template_url'); ?>/images/cannister.png" />
           </div><!-- /.graphic -->
         </div><!-- /.copy -->
+        <?php endif; ?>
+        <?php if (! (is_front_page() || is_home()) ) : ?>
+        <nav class="access">
+          <ul class="menu-left">
+            <li><a href="<?php echo home_url( '/' ); ?>">Home</a></li>
+            <li><a href="<?php echo home_url( '/' ); ?>project">Work</a></li>
+          </ul>
+          <ul class="menu-right">
+            <li><a href="<?php echo home_url( '/' ); ?>#aboutme">About</a></li>
+            <li><a href="<?php echo home_url( '/' ); ?>#contactme">Contact</a></li>
+          </ul>
+        </nav>
         <?php endif; ?>
       </header><!-- /header.wrapper -->

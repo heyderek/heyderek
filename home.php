@@ -40,7 +40,7 @@
             </footer><!-- /.panel-nav -->
         </div><!-- /.wrapper -->
       </section><!-- /.work -->
-      <section class="about">
+      <section class="about" id="aboutme">
         <div class="wrapper">
           <header class="page-tag-white white-double-border">
             <h3 class="white">About Derek</h3>
@@ -57,7 +57,7 @@
           </footer><!-- /.panel-nav -->
         </div><!-- /.wrapper -->
       </section><!-- /.about -->
-      <section class="contact">
+      <section class="contact" id="contactme">
         <div class="wrapper">
           <header class="page-tag-blue grey-double-border">
             <h3 class="blue">Contact</h3>
