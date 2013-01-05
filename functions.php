@@ -1,5 +1,8 @@
 <?php
 
+//Add image thumbnail support
+add_theme_support('post-thumbnails'); 
+
 //Add image sizes
 add_image_size('project-thumbnail', 605, 605, true );
 

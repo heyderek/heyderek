@@ -661,6 +661,9 @@ footer.grey-double-border {
   .tags a:hover {
     background: #ff6600; }
 
+.description {
+  text-align: center; }
+
 .work {
   background: white; }
   .work .page-tag-blue h3:before, .work .page-tag-blue h3:after {

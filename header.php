@@ -49,12 +49,14 @@
             <li><a href="#" id="contact">Contact</a></li>
           </ul>
         </nav>
-        <div class="copy content">
-          <h1>The web is a beautiful place, I'm just doing my best to help keep it that way.</h1>
-          <h2>And I do it using HTML5 and CSS3 to serve sparklingly responsive layouts to the masses.</h2>
-          <button class="button orange" id="chat">Let&rsquo;s Chat.</button>
-          <div class="graphic">
-            <img src="<?php bloginfo('template_url'); ?>/images/cannister.png" />
-          </div><!-- /.graphic -->
-        </div><!-- /.copy -->
+        <?php if ( is_front_page() || is_home() ): ?>
+          <div class="copy content">
+            <h1>The web is a beautiful place, I'm just doing my best to help keep it that way.</h1>
+            <h2>And I do it using HTML5 and CSS3 to serve sparklingly responsive layouts to the masses.</h2>
+            <button class="button orange" id="chat">Let&rsquo;s Chat.</button>
+            <div class="graphic">
+              <img src="<?php bloginfo('template_url'); ?>/images/cannister.png" />
+            </div><!-- /.graphic -->
+          </div><!-- /.copy -->
+        <?php endif; ?>
       </header><!-- /header.wrapper -->

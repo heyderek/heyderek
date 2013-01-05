@@ -1,7 +1,5 @@
 <?php
 
-add_theme_support('post-thumbnails'); 
-
 //Add Gallery Post Type
 function gallery_init() {
   $labels = array(
@@ -27,6 +25,7 @@ function gallery_init() {
     'show_in_menu' => true,
     'menu_position' => 10,
     'capability_type' => 'post',
+    'has_archive' => true,
     'supports' => array('title', 'editor', 'thumbnail', 'revisions' )
   );
   
