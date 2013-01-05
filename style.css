@@ -641,8 +641,12 @@ footer.grey-double-border {
 .content p, .content address {
   margin: 0 0 20px 0; }
 .content blockquote {
-  border-right: 5px solid #3399cc;
-  margin: 0 0 20px 10px; }
+  background: #eeeeee;
+  font-family: "OpenSansLightItalic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-left: 5px solid #3399cc;
+  padding: 10px 10px 0 20px;
+  margin: 0 0 20px 10px;
+  display: inline-block; }
 .content ul, .content ol {
   margin: 0 0 20px 10px;
   padding: 0 0 0 10px; }
@@ -652,7 +656,7 @@ footer.grey-double-border {
   list-style: decimal inside; }
 
 .excerpt-link {
-  padding: 5px 25px 5px 10px;
+  padding: 10px 25px 10px 10px;
   background: #3399cc;
   margin: 20px 0;
   position: relative;
@@ -664,7 +668,7 @@ footer.grey-double-border {
     content: ">";
     position: absolute;
     top: 0;
-    line-height: 35px;
+    line-height: 45px;
     font-size: 20px;
     right: 10px; }
   .excerpt-link:hover {
@@ -688,7 +692,8 @@ footer.grey-double-border {
   width: 58.75em;
   margin: 0 auto 40px;
   padding: 0 0 20px;
-  text-align: center; }
+  text-align: center;
+  border-bottom: 5px solid #999999; }
 
 .bloginfo {
   position: relative;
@@ -736,6 +741,9 @@ footer.grey-double-border {
 
 .single {
   padding: 40px 0; }
+
+.textleft {
+  text-align: left; }
 
 .work {
   background: white; }

@@ -3,10 +3,12 @@
          <div class="wrapper">
             <div class="copy single">
             <?php while(have_posts()) : the_post(); ?>
-            <article class="content post">
+            <article class="content">
               <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
               <h4><?php the_date('F Y'); ?></h4>
-              <?php the_content(); ?>
+              <div class="textleft">
+                <?php the_content(); ?>
+              </div>
               <div class="tags"><?php the_tags('Tagged: ', ''); ?></div><!--/.tags-->
             </article>
             <?php endwhile; ?>
