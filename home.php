@@ -32,7 +32,7 @@
                 </li>
                 <?php endwhile; ?>
             </ul><!-- /.gallery -->
-            <div class="teaser"><em>Want More?  <a href="#">Get more portfolio action here.</a></em></div>
+            <div class="teaser"><em>Want More?  <a href="<?php echo home_url('/');?>project">Get more portfolio action here.</a></em></div>
             <footer class="panel-nav grey-double-border">
               <div class="ns-button-wrap-blue">
                 <button class="tothetop"><span>To The Top!</span></button>
