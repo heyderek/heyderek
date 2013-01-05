@@ -392,6 +392,25 @@ footer.grey-double-border
     list-style: disc inside
   ol
     list-style: decimal inside
+.excerpt-link
+  padding: 5px 25px 5px 10px
+  background: $blue
+  margin: 20px 0
+  position: relative
+  border-radius: 5px
+  color: $white
+  display: inline-block
+  &:after
+    @include ModernPictogramsNormal
+    content: '>'
+    position: absolute
+    top: 0
+    line-height: 35px
+    font-size: 20px
+    right: 10px
+  &:hover
+    background: $drk_blue
+    color: $white
 .tags
   a
     background: $orange
@@ -404,6 +423,53 @@ footer.grey-double-border
       background: $lt_orange
 .description
   text-align: center
+.post
+  width: $cols12
+  margin: 0 auto 40px
+  padding: 0 0 20px
+  text-align: center
+.bloginfo
+  position: relative
+  background: #eee
+  border-radius: 5px
+  padding: 20px
+  margin: 0 0 40px
+  .avatar-frame, .speech
+    display: inline-block
+    vertical-align: middle
+    box-sizing: border-box
+  .speech
+    width: $cols10
+    margin-left: 20px
+    &:after
+      content: ''
+      border:
+        width: 20px
+        style: solid
+        color: transparent $cees transparent transparent
+      position: absolute
+      top: 20px
+      left: -40px
+  .avatar-frame
+    background: $white
+    padding: 10px
+    box-shadow: 0 0 4px $threes
+    transform: rotate(-5deg)
+.avatar-frame
+  width: $cols3
+  position: relative
+  img
+    width: 100%
+    height: auto
+.speech
+  background: $cees
+  border-radius: 5px
+  padding:  10px $gutter
+  position: relative
+  margin: 0 0 40px
+  p
+    margin: 0
+    font-size: 28px
 
 //Gallery
 

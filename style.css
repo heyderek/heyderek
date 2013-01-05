@@ -651,6 +651,26 @@ footer.grey-double-border {
 .content ol {
   list-style: decimal inside; }
 
+.excerpt-link {
+  padding: 5px 25px 5px 10px;
+  background: #3399cc;
+  margin: 20px 0;
+  position: relative;
+  border-radius: 5px;
+  color: white;
+  display: inline-block; }
+  .excerpt-link:after {
+    font-family: "ModernPictogramsNormal";
+    content: ">";
+    position: absolute;
+    top: 0;
+    line-height: 35px;
+    font-size: 20px;
+    right: 10px; }
+  .excerpt-link:hover {
+    background: #006699;
+    color: white; }
+
 .tags a {
   background: #ff3300;
   color: white;
@@ -663,6 +683,56 @@ footer.grey-double-border {
 
 .description {
   text-align: center; }
+
+.post {
+  width: 58.75em;
+  margin: 0 auto 40px;
+  padding: 0 0 20px;
+  text-align: center; }
+
+.bloginfo {
+  position: relative;
+  background: #eeeeee;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 0 40px; }
+  .bloginfo .avatar-frame, .bloginfo .speech {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box; }
+  .bloginfo .speech {
+    width: 48.75em;
+    margin-left: 20px; }
+    .bloginfo .speech:after {
+      content: "";
+      border-width: 20px;
+      border-style: solid;
+      border-color: transparent #cccccc transparent transparent;
+      position: absolute;
+      top: 20px;
+      left: -40px; }
+  .bloginfo .avatar-frame {
+    background: white;
+    padding: 10px;
+    box-shadow: 0 0 4px #333333;
+    transform: rotate(-5deg); }
+
+.avatar-frame {
+  width: 13.75em;
+  position: relative; }
+  .avatar-frame img {
+    width: 100%;
+    height: auto; }
+
+.speech {
+  background: #cccccc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  position: relative;
+  margin: 0 0 40px; }
+  .speech p {
+    margin: 0;
+    font-size: 28px; }
 
 .work {
   background: white; }
