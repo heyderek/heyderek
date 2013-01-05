@@ -396,6 +396,17 @@ footer.grey-double-border
     list-style: disc inside
   ol
     list-style: decimal inside
+  strong
+    @include OpenSansBold
+  em
+    @include OpenSansLightItalic
+  .first-character
+    @include OpenSansCondensedBold
+    float: left
+    color: $blue
+    font-size: 72px
+    padding: 0 5px 0 0
+    line-height: 55px
 
 .excerpt-link
   padding: 10px 25px 10px 10px

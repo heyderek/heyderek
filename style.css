@@ -654,6 +654,17 @@ footer.grey-double-border {
   list-style: disc inside; }
 .content ol {
   list-style: decimal inside; }
+.content strong {
+  font-family: "OpenSansBold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.content em {
+  font-family: "OpenSansLightItalic", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.content .first-character {
+  font-family: "OpenSansCondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  float: left;
+  color: #3399cc;
+  font-size: 72px;
+  padding: 0 5px 0 0;
+  line-height: 55px; }
 
 .excerpt-link {
   padding: 10px 25px 10px 10px;
