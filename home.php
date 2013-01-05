@@ -4,61 +4,28 @@
             <header class="page-tag-blue grey-double-border">
               <h3 class="blue">My Work</h3>
             </header><!-- /.page-tag-wrap -->
+            
             <ul class="gallery">
-              <li>
-                <div class="frame">
-                  <img src="images/placeholder.png" />
-                </div><!-- /.frame -->
-                <article class="content brief">
-                  <div class="port-devices">
-                    <img src="images/port_placeholder.png" />
-                  </div><!-- /.port-devices -->
-                  <div class="info">
-                    <h5>Project Title</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <ul class="tags">
-                      <li><a href="#">Wordpress</a></li>
-                      <li><a href="#">HTML5</a></li>
-                      <li><a href="#">CSS3</a></li>
-                      <li><a href="#">Responsive</a></li>
-                    </ul>
-                  </div><!-- /.info -->
-                </article>
-              </li>
-              <li>
-                <div class="frame">
-                  <img src="images/placeholder.png" />
-                </div><!-- /.frame -->
-                <article class="content brief">
-                  <div class="port-devices">
-                    <img src="images/port_placeholder.png" />
-                  </div><!-- /.port-devices -->
-                  <div class="info">
-                    <h5>Project Title</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <ul class="tags">
-                      <li><a href="#">Wordpress</a></li>
-                      <li><a href="#">HTML5</a></li>
-                      <li><a href="#">CSS3</a></li>
-                      <li><a href="#">Responsive</a></li>
-                    </ul>
-                  </div><!-- /.info -->
-                </article>
-              </li>
-              <li>
-                <div class="frame">
-                  <img src="images/placeholder.png" />
-                </div><!-- /.frame -->
-                <article class="content brief">
-                  <div class="port-devices">
-                    <img src="images/port_placeholder.png" />
-                  </div><!-- /.port-devices -->
-                  <div class="info">
-                    <h5>Project Title</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  </div><!-- /.info -->
-                </article>
-              </li>
+                <?php
+                $args = array(
+                  'post_type' => 'project'
+                );
+                
+                $project = new WP_Query($args); ?>
+                
+                <?php while($project->have_posts()) : $project->the_post(); ?>
+                
+                <li>
+                  <div class="frame">
+                    <?php the_post_thumbnail(); ?>
+                  </div><!-- /.frame -->
+                  <article class="content brief">
+                    <h5><?php the_title(); ?></h5>
+                    <?php the_content(); ?>
+                  </article><!-- /.brief -->
+                </li>
+                
+                <?php endwhile; ?>
             </ul><!-- /.gallery -->
             <div class="teaser"><em>Want More?  <a href="#">Get more portfolio action here.</a></em></div>
             <footer class="panel-nav grey-double-border">
