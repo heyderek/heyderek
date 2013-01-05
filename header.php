@@ -19,8 +19,8 @@
     <div class="page">
       <header class="wrapper masthead">
         <hgroup class="branding">
-          <h1>Derek Nelson Creative LLC</h1>
-          <h2>Web Designer and Stuff</h2>
+          <h1><?php bloginfo('name'); ?></h1>
+          <h2><?php bloginfo('description'); ?></h2>
           <a href="<?php echo home_url( '/' ); ?>" class="logo">
             <img src="<?php bloginfo('template_url'); ?>/images/dnc_logo.png" />
           </a><!-- /.logo -->
@@ -28,7 +28,7 @@
         <button class="shownav">Navigation</button>
         <nav class="access">
           <ul class="menu-left">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="<?php echo home_url( '/' ); ?>">Home</a></li>
             <li><a href="#" id="work">Work</a></li>
           </ul>
           <ul class="menu-right">
@@ -41,7 +41,7 @@
           <h2>And I do it using HTML5 and CSS3 to serve sparklingly responsive layouts to the masses.</h2>
           <button class="button orange" id="chat">Let&rsquo;s Chat.</button>
           <div class="graphic">
-            <img src="images/cannister.png" />
+            <img src="<?php bloginfo('template_url'); ?>/images/cannister.png" />
           </div><!-- /.graphic -->
         </div><!-- /.copy -->
       </header><!-- /header.wrapper -->
