@@ -734,6 +734,9 @@ footer.grey-double-border {
     margin: 0;
     font-size: 28px; }
 
+.single {
+  padding: 40px 0; }
+
 .work {
   background: white; }
   .work .page-tag-blue h3:before, .work .page-tag-blue h3:after {
