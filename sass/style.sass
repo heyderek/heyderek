@@ -592,6 +592,11 @@ footer.grey-double-border
     width: $cols12
   .copy
     width: $cols10
+  .bloginfo
+    .avatar-frame
+      width: $cols2
+    .speech
+      width: $cols9
   .gallery
     &>li
       width: $cols4 - 3em
@@ -617,6 +622,13 @@ footer.grey-double-border
     width: $cols8
   .copy
     width: $cols8
+  .bloginfo
+    .avatar-frame
+      width: $cols2
+    .speech
+      width: $cols5
+  .post
+    width: 100%
   .gallery
     &>li
       width: $cols3 - 2em
@@ -656,6 +668,22 @@ footer.grey-double-border
   .branding
     .logo
       padding: $gutter 0
+  .bloginfo
+    .avatar-frame
+      width: $cols3
+      display: block
+      margin: 0 auto
+    .speech
+      width: 100%
+      margin: 20px auto 0
+      &:after
+        left: 50%
+        margin-left: -20px
+        top: -40px
+        border:
+          color: transparent transparent $cees transparent
+  .post
+    width: 100%
   .access
     display: none
     border: 1px solid $nines
