@@ -6,7 +6,14 @@
             </header><!-- /.page-tag-wrap -->
             <h4 class="content description"><p>My complete portfolio.</p></h4>
             <ul class="gallery">
-                <?php while(have_posts()) : the_post(); ?>
+                <?php 
+                $args = array(
+                  'posts_per_page' => -1,
+                  'post_type' => 'project'
+                );
+                $work = new WP_Query($args);
+                 ?>
+                <?php while($work->have_posts()) : $work->the_post(); ?>
                 <li>
                   <div class="frame">
                     <?php the_post_thumbnail(); ?>
