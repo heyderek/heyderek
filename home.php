@@ -26,7 +26,7 @@
                   <article class="content brief">
                     <div class="port-devices">
                       <?php $propic = get_post_meta($post->ID, '_cmb_project_image', true); ?>
-                      <img src="<?php echo $propic; ?>" />
+                      <img src="<?php echo $propic; ?>" alt="<?php the_title(); ?>"/>
                     </div><!-- /.port-devices -->
                     <div class="info">
                       <h5><?php the_title(); ?></h5>
