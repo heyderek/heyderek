@@ -4,7 +4,7 @@
             <header class="page-tag-blue grey-double-border">
               <h3 class="blue">My Work</h3>
             </header><!-- /.page-tag-wrap -->
-            <h4 class="content description"><p>My complete web portfolio.</p></h4>
+            <h4 class="content description"><p>My complete portfolio.</p></h4>
             <ul class="gallery">
                 <?php while(have_posts()) : the_post(); ?>
                 <li>
