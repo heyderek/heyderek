@@ -590,13 +590,14 @@ footer.grey-double-border {
 .branding h1, .branding h2 {
   position: absolute;
   text-indent: -9999em; }
-.branding .logo {
+
+.logo {
   width: 13.75em;
   display: block;
   position: relative;
   margin: 0 auto;
   padding: 20px 0 40px; }
-  .branding .logo img {
+  .logo img {
     width: 100%;
     height: auto; }
 
