@@ -8,6 +8,13 @@
                 <?php
                 $args = array(
                   'post_type' => 'project',
+                  'tax_query' => array(
+                    array(
+                      'taxonomy' => 'featured',
+                      'field' => 'slug',
+                      'terms' => 'featured'
+                    )
+                  ),
                   'posts_per_page' => 3
                 );
                 $project = new WP_Query($args); ?>

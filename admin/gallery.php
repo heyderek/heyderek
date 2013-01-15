@@ -60,3 +60,19 @@ function project_tax_init() {
   ));
 }
 add_action('init', 'project_tax_init', 0);
+
+function project_featured_init() {
+  $labels = array(
+    'name' => _x('Featured','taxonomy general name'),
+    'singular_name' => _x('Featured', 'taxonomy singular name')
+  );
+  register_taxonomy('featured',array('project'),array(
+    'labels' => $labels,
+    'public' => true,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'hierarchical' => true,
+    'query_var' => true
+  ));
+}
+add_action('init', 'project_featured_init', 0);
