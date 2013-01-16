@@ -13,20 +13,7 @@
   <script src="<?php bloginfo('template_url'); ?>/js/custom.js" charset="utf-8"></script>
   <?php wp_head(); ?>
   <head>
-    <title><?php
-        //Title based on page.
-        global $page, $paged;
-        wp_title( '|', true, 'right' );
-        // Add the blog name.
-        bloginfo( 'name' );
-        // Add the blog description for the home/front page.
-        $site_description = get_bloginfo( 'description', 'display' );
-        if ( $site_description && ( is_home() || is_front_page() ) )
-        	echo " | $site_description";
-        // Add a page number if necessary:
-        if ( $paged >= 2 || $page >= 2 )
-        	echo ' | ' . sprintf( __( 'Page %s', 'toolbox' ), max( $paged, $page ) ); 
-      ?></title>
+    <title><?php wp_title(); ?></title>
   </head>
   <body>
     <div class="page">
