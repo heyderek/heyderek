@@ -340,7 +340,7 @@ input[type='text'], textarea {
   font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: inline-block;
   margin: 0 0 20px 0;
-  width: 15em;
+  width: 20em;
   background: #cccccc;
   border: none;
   color: #666666;
@@ -355,6 +355,11 @@ input[type='text'], textarea {
   .content ol.forms label {
     position: absolute;
     text-indent: -9999em; }
+  .content ol.forms .error {
+    color: red;
+    font-family: "OpenSansBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: block;
+    margin: 0 0 20px 0; }
 
 .button {
   font-family: "OpenSansCondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -638,7 +643,7 @@ footer.grey-double-border {
   position: relative; }
 
 .contact form {
-  width: 18.75em;
+  width: 95%;
   margin: 40px auto;
   display: block; }
 
@@ -1018,4 +1023,7 @@ footer.grey-double-border {
       width: 100%; }
     .gallery > li .brief .port-devices {
       width: 18.75em;
-      margin: 0 auto; } }
+      margin: 0 auto; }
+
+  input[type='text'], textarea {
+    width: 10em; } }

@@ -73,7 +73,7 @@ input[type='text'],textarea
   @include OpenSansLight
   display: inline-block
   margin: 0 0 $gutter 0
-  width: 15em
+  width: 20em
   background: $cees
   border: none
   color: $sixes
@@ -89,6 +89,11 @@ input[type='text'],textarea
     label
       position: absolute
       text-indent: -9999em
+    .error
+      color: red
+      @include OpenSansBold
+      display: block
+      margin: 0 0 $gutter 0
 
 //UI Elements
 
@@ -377,7 +382,7 @@ footer.grey-double-border
   position: relative
 .contact
   form
-    width: $cols4
+    width: 95%
     margin: 40px auto
     display: block
 
@@ -762,3 +767,5 @@ footer.grey-double-border
         .port-devices
           width: $cols4
           margin: 0 auto
+  input[type='text'],textarea
+    width: 10em

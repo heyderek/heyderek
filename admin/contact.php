@@ -77,24 +77,26 @@ if(isset($_POST['submitted'])) {
 		<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
 	
 			<ol class="forms">
-				<li><label for="contactName">Name</label>
-					<input type="text" name="contactName" id="contactName" placeholder="Your Name" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" class="requiredField" />
+				<li>
 					<?php if($nameError != '') { ?>
 						<span class="error"><?=$nameError;?></span> 
 					<?php } ?>
+  				<label for="contactName">Name</label>
+					<input type="text" name="contactName" id="contactName" placeholder="Your Name" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" class="requiredField" />
 				</li>
-				<li><label for="email">Email</label>
+				<li>
+				<?php if($emailError != '') { ?>
+					<span class="error"><?=$emailError;?></span>
+				<?php } ?>
+				<label for="email">Email</label>
 					<input type="text" name="email" id="email" placeholder="Your Email" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="requiredField email" />
-					<?php if($emailError != '') { ?>
-						<span class="error"><?=$emailError;?></span>
-					<?php } ?>
 				</li>
-				
-				<li class="textarea"><label for="commentsText">Comments</label>
-					<textarea name="comments" id="commentsText" rows="5" cols="30" placeholder="What can I do for you?" class="requiredField"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
+				<li class="textarea">
 					<?php if($commentError != '') { ?>
 						<span class="error"><?=$commentError;?></span> 
 					<?php } ?>
+  				<label for="commentsText">Message</label>
+					<textarea name="comments" id="commentsText" rows="5" cols="30" placeholder="What can I do for you?" class="requiredField"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
 				</li>
 				<li class="screenReader"><label for="checking" class="screenReader">If you want to submit this form, do not enter anything in this field</label><input type="text" name="checking" id="checking" class="screenReader" placeholder="Leave this field alone." value="<?php if(isset($_POST['checking']))  echo $_POST['checking'];?>" /></li>
 				<li class="buttons"><input type="hidden" name="submitted" id="submitted" value="true" /><button class="button orange" type="submit">Email me</button></li>
