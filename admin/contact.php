@@ -1,4 +1,5 @@
 <?php 
+
 //If the form is submitted
 if(isset($_POST['submitted'])) {
 
