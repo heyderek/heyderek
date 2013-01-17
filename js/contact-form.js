@@ -17,9 +17,7 @@ $(document).ready(function() {
 			}
 		});
 		if(!hasError) {
-			$('form#contactForm li.buttons button').fadeOut('normal', function() {
-				$(this).parent().append('<img src="/wp-content/themes/heyderek/images/loading.gif" alt="Loading&hellip;" height="31" width="31" />');
-			});
+			$('form#contactForm li.buttons button').fadeOut('normal');
 			var formInput = $(this).serialize();
 			$.post($(this).attr('action'),formInput, function(data){
 				$('form#contactForm').slideUp("fast", function() {				   
