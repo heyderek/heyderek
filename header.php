@@ -10,6 +10,7 @@
   <!--[if lt IE 9]><script src="<?php bloginfo('template_url'); ?>/js/html5.js" charset="utf-8"></script><![endif]-->
   <script src="<?php bloginfo('template_url'); ?>/js/prefixfree.min.js" charset="utf-8"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/scrollto.js" charset="utf-8"></script>
+  <script src="<?php bloginfo('template_url'); ?>/contact-form/scripts/contact-form.js" charset="utf-8"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/custom.js" charset="utf-8"></script>
   <?php wp_head(); ?>
   <head>

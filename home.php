@@ -72,12 +72,16 @@
           <article class="copy content">
             <h3>Let&rsquo;s talk.</h3>
             <h4>Like my work?  Let&rsquo;s chat about what I can do for you.</h4>
+<!--
             <form>
               <input type="text">
               <input type="text">
               <textarea></textarea>
               <input type="submit" class="button orange">
             </form>
+-->
+          <?php include_once('contact-form/contact.php'); ?>
+
           </article><!-- /.copy -->
             <footer class="panel-nav grey-double-border">
               <div class="ns-button-wrap-blue">
