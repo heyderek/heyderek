@@ -80,7 +80,7 @@
               <input type="submit" class="button orange">
             </form>
 -->
-          <?php include_once('contact-form/contact.php'); ?>
+          <?php include_once('admin/contact.php'); ?>
 
           </article><!-- /.copy -->
             <footer class="panel-nav grey-double-border">

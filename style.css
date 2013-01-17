@@ -350,6 +350,12 @@ input[type='text'], textarea {
     background: white;
     color: #666666; }
 
+.content ol.forms {
+  list-style: none; }
+  .content ol.forms label {
+    position: absolute;
+    text-indent: -9999em; }
+
 .button {
   font-family: "OpenSansCondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 10px 20px;
