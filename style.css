@@ -336,7 +336,9 @@ a {
   position: relative;
   text-align: center; }
 
-input[type='text'], textarea {
+input[type='text'],
+input[type='email'],
+textarea {
   font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: inline-block;
   margin: 0 0 20px 0;
@@ -346,12 +348,17 @@ input[type='text'], textarea {
   color: #666666;
   padding: 10px;
   border-radius: 5px; }
-  input[type='text']:focus, textarea:focus {
+  input[type='text']:focus,
+  input[type='email']:focus,
+  textarea:focus {
     background: white;
-    color: #666666; }
+    color: #666666;
+    border: 1px solid #cccccc; }
 
 .content ol.forms {
-  list-style: none; }
+  list-style: none;
+  margin: 0;
+  padding: 0; }
   .content ol.forms label {
     position: absolute;
     text-indent: -9999em; }

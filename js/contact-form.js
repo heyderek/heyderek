@@ -1,32 +1,51 @@
-$(document).ready(function() {
-	$('form#contactForm').submit(function() {
-		$('form#contactForm .error').remove();
-		var hasError = false;
-		$('.requiredField').each(function() {
-			if(jQuery.trim($(this).val()) == '') {
-				var labelText = $(this).prev('label').text();
-				$(this).parent().prepend('<span class="error">*You forgot to enter your '+labelText+'.</span>');
-				hasError = true;
-			} else if($(this).hasClass('email')) {
-				var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-				if(!emailReg.test(jQuery.trim($(this).val()))) {
-					var labelText = $(this).prev('label').text();
-					$(this).parent().prepend('<span class="error">You entered an invalid '+labelText+'.</span>');
-					hasError = true;
-				}
-			}
-		});
-		if(!hasError) {
-			$('form#contactForm li.buttons button').fadeOut('normal');
-			var formInput = $(this).serialize();
-			$.post($(this).attr('action'),formInput, function(data){
-				$('form#contactForm').slideUp("fast", function() {				   
-					$(this).before('<p class="thanks"><strong>Thanks!</strong> Your email was successfully sent. I check my email all the time, so I should be in touch soon.</p>');
-				});
-			});
-		}
-		
-		return false;
-		
-	});
+$(document).ready(function(){
+    if ($('body.home')
+        .length) {
+        // Validate the contact form
+        $('#contact-form').validate({
+            // Add requirements to each of the fields
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                message: {
+                    required: true,
+                    minlength: 10
+                }
+            },
+            // Specify what error messages to display
+            // when the user does something horrid
+            messages: {
+                name: {
+                    required: "Please enter your name.",
+                    minlength: jQuery.format("At least {0} characters required.")
+                },
+                email: {
+                    required: "Please enter your email.",
+                    email: "Please enter a valid email."
+                },
+                message: {
+                    required: "Please enter a message.",
+                    minlength: jQuery.format("At least {0} characters required.")
+                }
+            },
+            // Use Ajax to send everything to /php/form.php
+            submitHandler: function (form) {
+                $("#submit").attr("value", "Sending...");
+                $(form).ajaxSubmit({
+                    target: "#response",
+                    success: function (responseText, statusText, xhr, $form) {
+                        $(form).slideUp("fast");
+                        $("#response").html(responseText).hide().slideDown("fast");
+                    }
+                });
+                return false;
+            }
+        });
+    };
 });

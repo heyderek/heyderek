@@ -10,13 +10,15 @@
   <!--[if lt IE 9]><script src="<?php bloginfo('template_url'); ?>/js/html5.js" charset="utf-8"></script><![endif]-->
   <script src="<?php bloginfo('template_url'); ?>/js/prefixfree.min.js" charset="utf-8"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/scrollto.js" charset="utf-8"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/jquery.form.min.js" charset="utf-8"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/jquery.validate.min.js" charset="utf-8"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/contact-form.js" charset="utf-8"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/custom.js" charset="utf-8"></script>
   <?php wp_head(); ?>
   <head>
     <title><?php wp_title(); ?></title>
   </head>
-  <body>
+  <body class="home">
     <div class="page">
       <header class="wrapper masthead">
         <hgroup class="branding">

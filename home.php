@@ -72,16 +72,23 @@
           <article class="copy content">
             <h3>Let&rsquo;s talk.</h3>
             <h4>Like my work?  Let&rsquo;s chat about what I can do for you.</h4>
-<!--
-            <form>
-              <input type="text">
-              <input type="text">
-              <textarea></textarea>
-              <input type="submit" class="button orange">
-            </form>
--->
-          <?php include_once('admin/contact.php'); ?>
-
+              <form id="contact-form" action="<?php bloginfo('template_directory'); ?>/admin/form.php" method="post">
+              <ol class="forms">
+                <li>
+                  <input name="name" type="text" placeholder="Your Name (required)">
+                </li>
+                <li>
+                  <input name="email" type="email" placeholder="Your Email (required)">
+                </li>
+                <li>
+                  <textarea name="message" placeholder="What can I do for you?"></textarea>
+                </li>
+                <li>
+                  <input id="submit" name="submit" type="submit" class="button orange" value="Email Me!">
+                </li>
+              </ol><!-- /.forms -->
+              </form><!-- end #contact-form -->
+              <div id="response"></div>
           </article><!-- /.copy -->
             <footer class="panel-nav grey-double-border">
               <div class="ns-button-wrap-blue">
