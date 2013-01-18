@@ -360,13 +360,14 @@ textarea {
   margin: 0;
   padding: 0; }
   .content ol.forms label {
-    position: absolute;
-    text-indent: -9999em; }
+    display: block; }
   .content ol.forms .error {
-    color: red;
-    font-family: "OpenSansBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    display: block;
-    margin: 0 0 20px 0; }
+    color: red; }
+  .content ol.forms label.error {
+    margin: 0 0 20px; }
+
+#response {
+  margin: 0 auto 40px; }
 
 .button {
   font-family: "OpenSansCondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -835,9 +836,15 @@ footer.grey-double-border {
   .gallery .frame {
     margin: 0;
     position: relative;
+    background: white;
     box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.35); }
     .gallery .frame img {
-      cursor: pointer; }
+      cursor: pointer;
+      opacity: 0.5;
+      transition: all 0.3s ease; }
+  .gallery .active img {
+    opacity: 1;
+    transition: all 0.3s ease; }
   .gallery .active:after {
     content: "";
     border-width: 20px;

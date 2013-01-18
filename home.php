@@ -69,7 +69,7 @@
           <header class="page-tag-blue grey-double-border">
             <h3 class="blue">Contact</h3>
           </header><!-- /.page-tag-wrap -->
-          <article class="copy content">
+          <article class="copy content" id="contact_container">
             <h3>Let&rsquo;s talk.</h3>
             <h4>Like my work?  Let&rsquo;s chat about what I can do for you.</h4>
               <form id="contact-form" action="<?php bloginfo('template_directory'); ?>/admin/form.php" method="post">
@@ -81,15 +81,15 @@
                   <input name="email" type="email" placeholder="Your Email (required)">
                 </li>
                 <li>
-                  <textarea name="message" placeholder="What can I do for you?"></textarea>
+                  <textarea name="message" placeholder="What can I do for you?" rows="5"></textarea>
                 </li>
                 <li>
                   <input id="submit" name="submit" type="submit" class="button orange" value="Email Me!">
                 </li>
               </ol><!-- /.forms -->
               </form><!-- end #contact-form -->
-              <div id="response"></div>
           </article><!-- /.copy -->
+          <article id="response" class="copy content"></article><!-- /#response -->
             <footer class="panel-nav grey-double-border">
               <div class="ns-button-wrap-blue">
                 <button class="tothetop"><span>To The Top!</span></button>

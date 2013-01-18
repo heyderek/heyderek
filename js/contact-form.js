@@ -40,7 +40,7 @@ $(document).ready(function(){
                 $(form).ajaxSubmit({
                     target: "#response",
                     success: function (responseText, statusText, xhr, $form) {
-                        $(form).slideUp("fast");
+                        $('#contact_container').slideUp("fast");
                         $("#response").html(responseText).hide().slideDown("fast");
                     }
                 });

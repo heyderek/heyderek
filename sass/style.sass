@@ -92,13 +92,13 @@ textarea
     margin: 0
     padding: 0
     label
-      position: absolute
-      text-indent: -9999em
+      display: block
     .error
       color: red
-      @include OpenSansBold
-      display: block
-      margin: 0 0 $gutter 0
+    label.error
+      margin: 0 0 20px
+#response
+  margin: 0 auto 40px
 
 //UI Elements
 
@@ -568,10 +568,16 @@ footer.grey-double-border
   .frame
     margin: 0
     position: relative
+    background: $white
     box-shadow: 0 -1px 3px rgba(0,0,0,.35)
     img
       cursor: pointer
+      opacity: .5
+      transition: all .3s ease
   .active
+    img
+      opacity: 1
+      transition: all .3s ease
     &:after
       content: ''
       border:

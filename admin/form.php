@@ -15,7 +15,7 @@ foreach($_POST as $key => $value) {
 }
  
 // Assign the input values to variables for easy reference
-$name = $_POST["name"];
+$name = 'heyderek@dereknelson.net';
 $email = $_POST["email"];
 $message = $_POST["message"];
  
@@ -59,7 +59,7 @@ $headers = "From: $email";
 mail($to, $subject, $message, $headers);
  
 // Die with a success message
-die("<span class='success'>Well thank you! Your message has been sent. I'll be in touch pretty soon!</span>");
+die("<h1 class='success'>Well thank you!</h1> <h2>Your message has been sent. I check my email all the time, so I&rsquo;ll be in touch soon!</h2>");
  
 // A function that checks to see if
 // an email is valid
