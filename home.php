@@ -52,8 +52,8 @@
           <header class="page-tag-white white-double-border">
             <h3 class="white">About Derek</h3>
           </header><!-- /.page-tag-wrap -->
-          <article class="copy content">
-            <h3>The web is a beautiful place, I'm just doing my best to help keep it that way.</h3>
+          <article class="copy content largeMarge">
+            <h3>I need something to go here.  Now.</h3>
             <h4>And I do it using HTML5 and CSS3 to serve sparklingly responsive layouts to the masses.</h4>
             <h4>You can find me on Twitter <a href="http://twitter.com/dereknation" target="_blank">@dereknation</a>.</h4>
           </article><!-- /.copy -->
