@@ -53,8 +53,9 @@
             <h3 class="white">About Derek</h3>
           </header><!-- /.page-tag-wrap -->
           <article class="copy content largeMarge">
-            <h3>I need something to go here.  Now.</h3>
-            <h4>And I do it using HTML5 and CSS3 to serve sparklingly responsive layouts to the masses.</h4>
+            <h3>I&rsquo;m a creative problem-solver, armed with a stylesheet.</h3>
+            <h4><em>(I&rsquo;ve got a few other tricks up my sleeve too...)</em></h4>
+            <h4>I keep a blog about what&rsquo;s going on in the land of DNC.  <a href="<?php echo home_url('/'); ?>/blog-it-out">Check it out</a> (if you&rsquo;re into that sort of thing).</h4>
             <h4>You can find me on Twitter <a href="http://twitter.com/dereknation" target="_blank">@dereknation</a>.</h4>
           </article><!-- /.copy -->
           <footer class="panel-nav white-double-border">
