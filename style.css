@@ -845,6 +845,9 @@ footer.grey-double-border {
       cursor: pointer;
       opacity: 0.5;
       transition: all 0.3s ease; }
+      .gallery .frame img:hover {
+        opacity: 1;
+        transition: all 0.3s ease; }
   .gallery .active img {
     opacity: 1;
     transition: all 0.3s ease; }
